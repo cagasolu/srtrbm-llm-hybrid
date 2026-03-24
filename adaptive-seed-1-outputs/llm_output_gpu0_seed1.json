@@ -1,9 +1,0 @@
-{
-  "regime": "attractor-dominated refinement",
-  "attractor_strength": "high",
-  "convergence_type": "strong",
-  "diversity_shift": "refined",
-  "structural_improvement": "strong",
-  "confidence": 0.87,
-  "reason": "The dynamics show a clear pull toward low-energy, prototype-like outputs rather than preserving unconstrained variability. Quantitatively: beta_effective is very large (~71.5) and energy_gap is large (~32.6), which indicates a steep energy landscape and strong weighting of low-energy modes; temperature (~0.92) is high enough to allow exploration but the dominant beta and big energy gap drive strong concentration. Reconstruction MSE is low (0.016) and reconstruction_accuracy is high (~0.98), so the model reliably maps latent states to crisp digit shapes. Pixel_entropy is relatively low (0.295) and measured diversity is reduced (~0.196) compared with unconstrained sampling, consistent with a sharpening of per-pixel distributions. MCMC diagnostics show moderate autocorrelation (tau_int ~34) but decent effective sample sizes (ais_ess ~651, mcmc_ess ~566), i.e. sampling is stable but correlated as trajectories flow into attractor basins. Visually, Image A contains a broader set of stroke variations and some ambiguous/blurred instances; Image B displays clearer, more separable strokes and more prototypical digit contours \u2014 many variant instantiations have collapsed to consistent canonical shapes. This is not mere destructive collapse: different digit categories remain present (diversity is reduced but not lost), so the process refines and concentrates probability mass onto separable, high-likelihood manifolds (strong attractor behavior with structural improvement)."
-}
