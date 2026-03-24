@@ -293,3 +293,11 @@ It is a system that:
 * refines
 * interprets
 * and starts to **understand its own behavior**
+
+---
+
+# License
+
+BSD 3-Clause License  
+
+Copyright (c) 2026 Görkem Can Süleymanoğlu
