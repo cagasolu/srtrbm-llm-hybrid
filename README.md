@@ -27,7 +27,7 @@ The SR-TRBM model used in this project originates from prior work:
 
 👉 https://github.com/cagasolu/sr-trbm
 
-The associated arXiv publication can be considered the **theoretical ancestor** of this system.
+The associated arXiv publication can be considered the theoretical ancestor of this system.
 
 ---
 
