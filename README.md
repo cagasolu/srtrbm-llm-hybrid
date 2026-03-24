@@ -2,6 +2,8 @@
 
 A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural refinement, and LLM-based multimodal interpretation.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211122.svg)](https://doi.org/10.5281/zenodo.19211122)
+
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)
 ![CUDA](https://img.shields.io/badge/CUDA-enabled-green)
 ![Python](https://img.shields.io/badge/python-3.10-blue)
