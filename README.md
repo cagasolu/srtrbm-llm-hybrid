@@ -2,7 +2,7 @@
 
 A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural refinement, and LLM-based multimodal interpretation.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211122.svg)](https://doi.org/10.5281/zenodo.19211122)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211496.svg)](https://doi.org/10.5281/zenodo.19211496)
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)
 ![CUDA](https://img.shields.io/badge/CUDA-enabled-green)
@@ -340,7 +340,7 @@ It is a system that:
 If you use this implementation, please cite:
 
 ### Software (Zenodo)
-Süleymanoğlu, G. C. (2026). SRTRBM-LLM-HYBRID: A Hybrid Intelligence System for Attractor Dynamics Analysis (Version 1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.19211122
+Süleymanoğlu, G. C. (2026). SRTRBM-LLM-HYBRID: A Hybrid Intelligence System for Attractor Dynamics Analysis (Version 1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.19211496
 
 ---
 
