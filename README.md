@@ -335,6 +335,15 @@ It is a system that:
 
 ---
 
+## 📖 Citation
+
+If you use this implementation, please cite:
+
+### Software (Zenodo)
+Süleymanoğlu, G. C. (2026). SRTRBM-LLM-HYBRID: A Hybrid Intelligence System for Attractor Dynamics Analysis (Version 1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.19211122
+
+---
+
 ## License
 
 BSD 3-Clause License  
