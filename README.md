@@ -21,6 +21,43 @@ it can actually indicate **attractor-driven convergence**.
 
 ---
 
+## 📚 Theoretical Origin
+
+The SR-TRBM model used in this project originates from prior work:
+
+👉 https://github.com/cagasolu/sr-trbm
+
+The associated arXiv publication can be considered the **theoretical ancestor** of this system.
+
+---
+
+## 🧠 Relation to This Work
+
+This project builds upon that foundation and extends it into a hybrid intelligence system by introducing:
+
+* Neural refinement (CNN-based)
+* Multimodal LLM interpretation
+* Attractor-oriented analysis of generative dynamics
+
+In this sense:
+
+* The original work defines the **core generative framework**
+* This repository focuses on **analysis, refinement, and interpretability layers**
+
+---
+
+## 🚀 Research Direction
+
+This work can be seen as a **next-stage extension** of the original SR-TRBM framework, moving toward:
+
+* Interpretable generative systems
+* LLM-assisted model understanding
+* Hybrid AI architectures
+
+A follow-up publication may further formalize this extended system.
+
+---
+
 ## 🧠 Core Idea
 
 The system analyzes generative behavior through:
@@ -276,7 +313,7 @@ It introduces:
 
 ## 🔮 Future Work
 
-* LLM-driven adaptive control (temperature / beta tuning)
+* LLM-driven adaptive control (temperature/beta tuning)
 * Closed-loop generative systems
 * Real-time interpretability
 * Multi-sample evaluation
@@ -296,7 +333,7 @@ It is a system that:
 
 ---
 
-# License
+## License
 
 BSD 3-Clause License  
 
