@@ -1,0 +1,12 @@
+{
+  "temperature": 0.922528088092804,
+  "beta_effective": 71.50780273731085,
+  "energy_gap": 32.567352294921875,
+  "reconstruction_mse": 0.015971582382917404,
+  "reconstruction_accuracy": 0.9803781509399414,
+  "ais_ess": 651.2911376953125,
+  "mcmc_tau_int": 33.9369588404079,
+  "mcmc_ess": 565.7548777511271,
+  "pixel_entropy": 0.29501527547836304,
+  "diversity": 0.19638390839099884
+}

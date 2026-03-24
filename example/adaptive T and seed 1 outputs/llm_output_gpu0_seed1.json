@@ -1,0 +1,9 @@
+{
+  "regime": "attractor-dominated (mode-concentrating / manifold refinement)",
+  "attractor_strength": "high",
+  "convergence_type": "strong",
+  "diversity_shift": "refined",
+  "structural_improvement": "strong",
+  "confidence": 0.8,
+  "reason": "Quantitatively the system shows hallmarks of a strong attractor: a large beta_effective (71.5) and a sizeable energy_gap (32.57) indicate the sampler is strongly pulled toward low-energy regions of the model landscape, and the low reconstruction_mse (0.016) with high reconstruction_accuracy (0.98) shows generated samples lie tightly on the learned data manifold. AIS_ess and mcmc_ess are substantial while mcmc_tau_int (~34) is nontrivial, consistent with good overall sampling efficiency but with persistent autocorrelation as chains remain within attractor basins rather than freely exploring many disparate basins. Visually, Image A contains many variants with jittered strokes and intra-class variability; Image B displays crisper strokes, cleaner digit outlines and clearer separability between foreground strokes and background noise. That pattern\u2014reduced intra-class scatter, preserved inter-class variety\u2014matches a refinement of diversity rather than wholesale collapse: class-level diversity is preserved (different digit types remain present) but intra-mode variance is reduced (variants converge to prototypical shapes). Pixel_entropy (~0.295) and the modest diversity metric (~0.196) support reduced pixel-level uncertainty and tighter mode concentration. In sum, the dynamics denote strong attractor-driven convergence that refines and clarifies structure (improving legibility and separability) while preserving the essential multimodal composition of the manifold."
+}
