@@ -29,22 +29,7 @@ The SR-TRBM model used in this project originates from prior work:
 
 👉 https://github.com/cagasolu/sr-trbm
 
-The associated arXiv publication can be considered the theoretical ancestor of this system.
-
----
-
-## 🧠 Relation to This Work
-
-This project builds upon that foundation and extends it into a hybrid intelligence system by introducing:
-
-* Neural refinement (CNN-based)
-* Multimodal LLM interpretation
-* Attractor-oriented analysis of generative dynamics
-
-In this sense:
-
-* The original work defines the **core generative framework**
-* This repository focuses on **analysis, refinement, and interpretability layers**
+The associated arXiv publication can be regarded as the theoretical precursor to this system.
 
 ---
 
