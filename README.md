@@ -103,13 +103,52 @@ Artifacts
 
 ---
 
-## 🔍 LLM Role
+## 🔍 LLM Integration (OpenAI)
 
-The LLM acts as a **multimodal meta-interpreter**.
+This system uses an **OpenAI LLM (multimodal)** as an interpretation layer.
 
-It analyzes both numerical metrics and visual outputs to understand how the system behaves.
+The LLM is not used for generation, but for **analyzing the behavior of the model**.
 
-### Metrics
+---
+
+### 🧠 Why use an LLM?
+
+Traditional metrics (MSE, entropy, etc.) are not always enough to understand:
+
+* whether the system is collapsing
+* whether diversity is meaningful
+* whether outputs are structurally consistent
+
+The LLM provides:
+
+* semantic interpretation
+* pattern-level reasoning
+* comparison between visual outputs
+
+In short:
+
+> The model generates.
+> The LLM interprets.
+
+---
+
+### 🔑 API Key Requirement
+
+To run the LLM analysis, you must provide an OpenAI API key.
+
+Set it using:
+
+```bash
+export OPENAI_API_KEY=your_key_here
+```
+
+---
+
+### ⚙️ What the LLM receives
+
+The LLM processes both:
+
+#### Metrics
 
 * temperature
 * beta_effective
@@ -117,12 +156,14 @@ It analyzes both numerical metrics and visual outputs to understand how the syst
 * reconstruction error
 * entropy & diversity
 
-### Visual Inputs
+#### Images
 
 * refined samples
-* stabilized (“perfect”) outputs
+* stabilized ("perfect") outputs
 
-### Example Output
+---
+
+### 📊 Example Output
 
 ```json
 {
@@ -133,6 +174,14 @@ It analyzes both numerical metrics and visual outputs to understand how the syst
   "structural_improvement": "strong"
 }
 ```
+
+---
+
+### ⚠️ Note
+
+* The LLM is used only for **analysis and interpretation**
+* It does not influence training (yet)
+* Future versions may include **LLM-driven control loops**
 
 ---
 
