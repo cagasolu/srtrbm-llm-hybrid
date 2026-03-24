@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+
+title: "SRTRBM-LLM-HYBRID"
+version: "v1.0.1"
+date-released: 2026-03-25
+
+authors:
+  - family-names: "Süleymanoğlu"
+    given-names: "Görkem Can"
+
+doi: 10.5281/zenodo.19211122
+url: "https://doi.org/10.5281/zenodo.19211122"
+repository-code: "https://github.com/cagasolu/srtrbm-llm-hybrid"
+
+abstract: >
+  A hybrid AI system combining thermodynamic generative modeling (SR-TRBM),
+  neural refinement, and LLM-based multimodal interpretation for analyzing
+  attractor dynamics and convergence behavior.
+
+keywords:
+  - SR-TRBM
+  - hybrid AI
+  - generative modeling
+  - LLM
+  - attractor dynamics
