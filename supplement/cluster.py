@@ -129,7 +129,7 @@ for d in range(10):
     best = torch.argsort(dists)[:SAMPLES_PER_CLASS]
     reference_bank.append(cls[best].to(device))
 
-print("The reference bank is ready, ↘\n")
+print(", ↘\n")
 
 
 def normalize_digit(patchX):
