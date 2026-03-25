@@ -14,7 +14,7 @@ A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural
 
 Pretrained artifacts are available on Zenodo:
 
-👉 https://doi.org/10.5281/zenodo.19211602
+👉 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211602.svg)](https://doi.org/10.5281/zenodo.19211602)
 
 ### Citation
 Süleymanoğlu, G. C. (2026). SRTRBM-LLM-HYBRID Artifacts [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.19211602
