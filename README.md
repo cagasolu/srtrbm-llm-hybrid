@@ -8,6 +8,8 @@ A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural
 ![CUDA](https://img.shields.io/badge/CUDA-enabled-green)
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 
+> The model generates. The system interprets. The pipeline understands.
+
 ---
 
 ## 📦 Artifacts
