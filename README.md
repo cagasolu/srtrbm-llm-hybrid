@@ -18,6 +18,8 @@ Pretrained artifacts are available on Zenodo:
 
 👉 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211602.svg)](https://doi.org/10.5281/zenodo.19211602)
 
+⚠️ Note: The complete setup, including the GitHub source code and pretrained artifacts, requires ~190 MB of disk space.
+
 ---
 
 ## 🚀 Overview
