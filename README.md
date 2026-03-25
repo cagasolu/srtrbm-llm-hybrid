@@ -10,6 +10,17 @@ A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural
 
 ---
 
+## 📦 Artifacts
+
+Pretrained artifacts are available on Zenodo:
+
+👉 https://doi.org/10.5281/zenodo.19211602
+
+### Citation
+Süleymanoğlu, G. C. (2026). SRTRBM-LLM-HYBRID Artifacts [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.19211602
+
+---
+
 ## 🚀 Overview
 
 This project implements a hybrid intelligence pipeline that brings together:
@@ -30,18 +41,6 @@ The SR-TRBM model used in this project originates from prior work:
 👉 https://github.com/cagasolu/sr-trbm
 
 The associated arXiv publication can be regarded as the theoretical precursor to this system.
-
----
-
-## 🚀 Research Direction
-
-This work can be seen as a **next-stage extension** of the original SR-TRBM framework, moving toward:
-
-* Interpretable generative systems
-* LLM-assisted model understanding
-* Hybrid AI architectures
-
-A follow-up publication may further formalize this extended system.
 
 ---
 
