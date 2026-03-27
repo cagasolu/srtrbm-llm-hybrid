@@ -14,11 +14,23 @@ A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural
 
 ## 📦 Artifacts
 
-Pretrained artifacts are available on Zenodo:
+The following artifacts are included to support training, evaluation, and reproducibility of the experimental pipeline:
 
-👉 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211602.svg)](https://doi.org/10.5281/zenodo.19211602)
+- **`stan.7z`**  
+  Compressed dataset archive. After extraction, it provides `stan.dgts`, which is used as the primary numerical dataset.
 
-⚠️ Note: The complete setup, including the GitHub source code and pretrained artifacts, requires approximately ~190 MB of disk space.
+- **`zeta_mnist_hybrid.pt`**  
+  Pretrained model checkpoint used for inference, sampling, and energy-based analysis.
+
+### 🔧 Usage
+
+Extract the dataset before running experiments:
+
+```bash
+7z x stan.7z
+```
+
+Alternatively, you can use WinRAR or other compatible tools.
 
 ---
 
