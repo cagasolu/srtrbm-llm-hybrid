@@ -1,0 +1,13 @@
+{
+  "regime": "low_temperature",
+  "phase": "ordered",
+  "failures": [
+    "none"
+  ],
+  "actions": {
+    "none": true
+  },
+  "confidence": 0.84,
+  "reason": "final_block",
+  "analysis": "We observe a large lattice of generated handwritten digits with a clear dominance of simple looped and single-stroke shapes (many 0-like and 1-like samples) and fewer high-curvature, multi-stroke digits (notably 3, 5, 8 are sparse).  \nWe see the images cluster around compact, well-formed attractor shapes (round loops and straight strokes) rather than spanning a broad range of noisy or blended configurations.  \nWe detect reduced configurational entropy and low diversity metrics that reflect concentrated sampling into a few deep basins rather than random collapse into noise.  \nWe observe that beta_effective is very large and the energy_gap is substantial, which indicates strong energy minima and well-separated basins in the landscape despite the nominal temperature \u2248 0.92.  \nWe see that the MCMC autocorrelation time (tau_int \u2248 20) is moderate, implying some correlation between samples but not clear trapping on timescales that contradict the effective low-temperature regime.  \nWe detect an increasing beta trend (beta_slope > 0) suggesting the landscape is becoming more ordered over time, consistent with attractor concentration rather than a sampling failure.  \nWe observe susceptibility is modest rather than peaking, consistent with the system sitting in an ordered (low-entropy) phase rather than at a critical point.  \nWe detect that geometrically complex digits (high curvature/topological variety like 2, 3, 5, 8) are underrepresented and appear to be absorbed into simpler loop or stroke attractors; this points to an energy bias toward low-complexity configurations.  \nWe see that distinct geometric classes appear as distinct basins for the dominant simple shapes, but several complex classes are not forming their own robust minima at this effective temperature.  \nWe observe overall consistency between the measured temperature and the energy landscape: the system behaves like an effectively low-temperature, ordered phase with attractor concentration rather than an inconsistent or trapped sampler.  \nWe detect no clear violation of the thermodynamic regime or evidence that geometrically distinct classes are improperly merged beyond the natural bias toward simpler attractors at low effective temperature.  \nWe observe that if the goal is stronger generative diversity of complex digits, one could raise temperature or otherwise encourage exploration; otherwise the current behavior is a stable ordered representation regime."
+}
