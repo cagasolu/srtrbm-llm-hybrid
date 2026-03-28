@@ -1,6 +1,6 @@
 # SR-TRBM + LLM Hybrid Intelligence System
 
-A hybrid AI system combining thermodynamic generative modeling (SR-TRBM), neural refinement, and LLM-based multimodal interpretation.
+A hybrid intelligence system that integrates thermodynamic energy-based generation (SR-TRBM), deterministic neural refinement, and LLM-driven multimodal interpretation within a closed-loop framework.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211121.svg)](https://doi.org/10.5281/zenodo.19211121)
 
