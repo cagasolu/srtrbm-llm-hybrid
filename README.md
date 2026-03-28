@@ -30,7 +30,7 @@ Extract the dataset before running experiments:
 7z x stan.7z
 ```
 
-Alternatively, you can use WinRAR or other compatible tools.
+Alternatively, you can use WinRAR or other compatible tools. The model's entire size is approximately 190 MB.
 
 ---
 
@@ -42,8 +42,15 @@ This project implements a hybrid intelligence pipeline that brings together:
 * CNN-based structural refinement
 * Multimodal LLM interpretation
 
-Instead of treating low diversity as a failure, we look at it differently —
-it can actually indicate **attractor-driven convergence**.
+At the core of the system, a Boltzmann machine learns geometric representations of real-world objects. Instead of relying on large-scale data, it focuses on capturing structure from meaningful inputs observed on the fly, using energy-based dynamics to reach stable representations.
+
+In parallel, the learning process is continuously observed by a multimodal LLM (OpenAI GPT-5mini). The goal here is not generation but interpretation—translating what the model learns into something understandable, while also tracking convergence behavior and structural consistency.
+
+Rather than a simple pipeline, this forms a feedback loop. Generation, refinement, and interpretation interact with each other, making the system behave more like a dynamic process than a static model.
+
+Our model is an evolving system. The broader goal is to scale the system into a larger and more efficient architecture. We aim to organize real-world data at a lower cost while maintaining strong interpretability.
+
+The code is shared in a semi-open structure, and the use of different parts of the system is encouraged within the scope of the provided license and legal framework.
 
 ---
 
