@@ -101,8 +101,9 @@ Core
 ├── srtrbm_project_core.py        # main pipeline (generation + metrics)
 
 LLM Integration
-├── openai/
-│   └── call_openai.py            # multimodal LLM evaluation
+├── openaiF/
+│   └── engine.py
+│   └── gateway.py                # multimodal LLM evaluation
 
 Refinement
 ├── supplement/
@@ -135,7 +136,7 @@ Additional Models
 ├── analysis
 ├── correction
 ├── graphs
-├── openai
+├── openaiF
 ├── supplement
 ├── srtrbm_project_core.py
 ├── stan.dgts
