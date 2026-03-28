@@ -122,7 +122,7 @@ Correction Modules
 ├── correction/
 │   └── NO.py
 
-Artifacts
+Additional Models
 ├── zeta_mnist_hybrid.pt
 ├── stan.dgts
 ```
