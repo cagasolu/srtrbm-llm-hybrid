@@ -85,11 +85,11 @@ This allows us to distinguish between:
 ```
 Latent Space → SR-TRBM → Generated Samples
                           ↓
-                     Cluster Refinement
+                         Cluster Refinement
                           ↓
-               LLM Multimodal Interpretation
+                         LLM Multimodal Interpretation
                           ↓
-           Attractor / Convergence Analysis
+                         Attractor / Convergence Analysis
 ```
 
 ---
