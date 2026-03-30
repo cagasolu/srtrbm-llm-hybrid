@@ -1,0 +1,13 @@
+{
+  "regime": "ordered",
+  "phase": "learning",
+  "failures": [
+    "mode_collapse"
+  ],
+  "actions": {
+    "increase_temperature": true
+  },
+  "confidence": 0.78,
+  "analysis": "Low sample entropy (0.118) and low diversity (0.195) combined with a very large inverse temperature (beta=71.51) and rising beta trend indicate the model is strongly ordered. The history shows a large positive gap trend but a negative current gap (−13.39), implying unstable or oscillatory energy alignment with the target. Visual samples show many legible digits but limited variability and repeated motifs, consistent with reduced mode coverage. Susceptibility is moderate (0.539) and learning is active (learning_signal=0.230, stagnation=false), so the system is still adapting but biased toward narrow attractors. Overall this looks like an over-ordered / mode-collapse regime driven by overheating of the inverse-temperature; increasing thermal noise should improve diversity and entropy.",
+  "reason": "json"
+}

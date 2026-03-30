@@ -1,0 +1,171 @@
+(srtrbm_env) ...$ python3 srtrbm_project_core.py
+Training:  15%|█████▋                                | 60/400 [00:43<04:23,  1.29it/s, T=0.911, flip=0.092, beta=46.883]
+
+[LLM TRIGGER] epoch=60 | std=3.693960 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.95, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'source': 'OpenAI gpt-5-mini'}
+
+[LLM DECISION] continue | confidence=0.950
+[LLM] Continue
+Training:  30%|███████████                          | 120/400 [01:40<03:14,  1.44it/s, T=0.908, flip=0.076, beta=54.215]
+
+[LLM TRIGGER] epoch=120 | std=0.276977 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.85, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'source': 'OpenAI gpt-5-mini'}
+
+[LLM DECISION] continue | confidence=0.850
+[LLM] Continue
+Training:  45%|████████████████▋                    | 180/400 [02:39<03:02,  1.21it/s, T=0.909, flip=0.069, beta=59.516]
+
+[LLM TRIGGER] epoch=180 | std=0.285180 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.92, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'source': 'OpenAI gpt-5-mini'}
+
+[LLM DECISION] continue | confidence=0.920
+[LLM] Continue
+Training:  60%|██████████████████████▏              | 240/400 [03:34<02:28,  1.08it/s, T=0.912, flip=0.064, beta=63.624]
+
+[LLM TRIGGER] epoch=240 | std=0.264110 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.9, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'source': 'OpenAI gpt-5-mini'}
+
+[LLM DECISION] continue | confidence=0.900
+[LLM] Continue
+Training:  75%|███████████████████████████▊         | 300/400 [04:37<01:30,  1.10it/s, T=0.916, flip=0.060, beta=66.990]
+
+[LLM TRIGGER] epoch=300 | std=0.314207 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.92, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'source': 'OpenAI gpt-5-mini'}
+
+[LLM DECISION] continue | confidence=0.920
+[LLM] Continue
+Training:  90%|█████████████████████████████████▎   | 360/400 [05:36<00:27,  1.46it/s, T=0.920, flip=0.057, beta=69.839]
+
+[LLM TRIGGER] epoch=360 | std=0.305236 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.88, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'source': 'OpenAI gpt-5-mini'}
+
+[LLM DECISION] continue | confidence=0.880
+[LLM] Continue
+Training: 100%|█████████████████████████████████████| 400/400 [06:10<00:00,  1.08it/s, T=0.923, flip=0.055, beta=71.508]
+
+[GPU 0] Running AIS...
+✔ AIS finished in 29.30 seconds
+
+Exact Energy Refinement Diagnostics
+-----------------------------------
+Free Energy Before : -485.119385
+Free Energy After  : -539.611572
+ΔF (After-Before)  : -54.492188
+
+Physical Refinement Diagnostics
+Primary magnetic susceptibility: 0.5115285515785217
+Binder cumulant (1): 0.6550817489624023
+
+Secondary magnetic susceptibility: 0.5114245414733887
+Binder cumulant (2): 0.6563000679016113
+
+Running energy analysis ↓
+
+
+Running diagnostics with the following calculations ↙
+
+✔ Energy distribution finished in 112.83 seconds
+✔ Energy landscape extremes finished in 0.14 seconds
+✔ Phase diagram finished in 0.43 seconds
+✔ RBM filters finished in 0.07 seconds
+✔ Sample quality metrics finished in 9.62 seconds
+
+Diagnostics completed in 124.65 seconds
+
+GPU Energy Used : 16946.06 Joules
+
+Device: cuda
+, ↘
+
+samples_gpu0_seed1_refined.png → Patches: torch.Size([1200, 1, 28, 28])
+samples_gpu0_seed1_refined.png → Avg MSE: 0.17006283
+Saved: samples_gpu0_seed1_perfect.png
+
+Device: cuda
+, ↘
+
+samples_prof_gpu0_seed1_refined.png → Patches: torch.Size([1200, 1, 28, 28])
+samples_prof_gpu0_seed1_refined.png → Avg MSE: 0.16971904
+Saved: samples_prof_gpu0_seed1_perfect.png
+
+DEBUG perfect_img_path: samples_prof_gpu0_seed1_perfect.png
+
+[LLM RAW OUTPUT]
+ {
+  "analysis": "Low sample entropy (0.118) and low diversity (0.195) combined with a very large inverse temperature (beta=71.51) and rising beta trend indicate the model is strongly ordered. The history shows a large positive gap trend but a negative current gap (−13.39), implying unstable or oscillatory energy alignment with the target. Visual samples show many legible digits but limited variability and repeated motifs, consistent with reduced mode coverage. Susceptibility is moderate (0.539) and learning is active (learning_signal=0.230, stagnation=false), so the system is still adapting but biased toward narrow attractors. Overall this looks like an over-ordered / mode-collapse regime driven by overheating of the inverse-temperature; increasing thermal noise should improve diversity and entropy.",
+  "regime": "ordered",
+  "phase": "learning",
+  "failure": "mode_collapse",
+  "action": "increase_temperature",
+  "confidence": 0.78
+}
+
+[LLM CLEAN RESULT]
+ {'regime': 'ordered', 'phase': 'learning', 'failures': ['mode_collapse'], 'actions': {'increase_temperature': True}, 'confidence': 0.78, 'analysis': 'Low sample entropy (0.118) and low diversity (0.195) combined with a very large inverse temperature (beta=71.51) and rising beta trend indicate the model is strongly ordered. The history shows a large positive gap trend but a negative current gap (−13.39), implying unstable or oscillatory energy alignment with the target. Visual samples show many legible digits but limited variability and repeated motifs, consistent with reduced mode coverage. Susceptibility is moderate (0.539) and learning is active (learning_signal=0.230, stagnation=false), so the system is still adapting but biased toward narrow attractors. Overall this looks like an over-ordered / mode-collapse regime driven by overheating of the inverse-temperature; increasing thermal noise should improve diversity and entropy.', 'reason': 'json'}
+[ANASIS] collapse=0.426 stagnation=0.492 healthy=0.174 → final=0.587
+[ANALYSIS SIGNAL] 0.587
+[LLM OUTPUT SAVED] → llm_output_gpu0_seed1.json
+
+[LLM RESULT]
+
+{
+  "regime": "ordered",
+  "phase": "learning",
+  "failures": [
+    "mode_collapse"
+  ],
+  "actions": {
+    "increase_temperature": true
+  },
+  "confidence": 0.78,
+  "analysis": "Low sample entropy (0.118) and low diversity (0.195) combined with a very
+large inverse temperature (beta=71.51) and rising beta trend indicate the model is
+strongly ordered. The history shows a large positive gap trend but a negative current gap
+(−13.39), implying unstable or oscillatory energy alignment with the target. Visual
+samples show many legible digits but limited variability and repeated motifs, consistent
+with reduced mode coverage. Susceptibility is moderate (0.539) and learning is active
+(learning_signal=0.230, stagnation=false), so the system is still adapting but biased
+toward narrow attractors. Overall this looks like an over-ordered / mode-collapse regime
+driven by overheating of the inverse-temperature; increasing thermal noise should improve
+diversity and entropy.",
+  "reason": "json"
+}
+Hybrid Thermodynamic RBM Final Results
+Seed: 1 | GPU: 0
+Final Temperature        : 0.922528
+Weight Norm              : 65.967957
+Effective Beta           : 71.507803
+Train Log-Likelihood     : -676.593323
+Test Log-Likelihood      : -675.912415
+Train Pseudo-Likelihood  : -5.925153
+Test Pseudo-Likelihood   : -5.901226
+Reconstruction MSE       : 0.015972
+Reconstruction Accuracy  : 0.980378
+Mean Data Energy         : -517.092041
+Mean Model Energy        : -484.805786
+Energy Gap               : 32.286255
+GPU Energy Used          : 16946.06 J
+Log Partition (AIS)      : 1193.685425
+AIS ESS                  : 651.29
+AIS Log-Weight Variance  : 1.586198
+MCMC tau_int             : 20.39
+MCMC ESS                 : 941.74
+Pixel Entropy            : 0.294151
+Sample Diversity         : 0.195083
+Mean Distribution L2     : 0.090988
+Professional Samples File: samples_prof_gpu0_seed1.png
+Generated Samples File   : samples_gpu0_seed1.png
+
+(srtrbm_env) ...$
