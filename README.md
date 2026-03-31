@@ -219,14 +219,6 @@ The LLM processes both:
 
 ---
 
-### ⚠️ Note
-
-* The LLM is used only for **analysis and interpretation**
-* It does not influence training (yet)
-* Future versions may include **LLM-driven control loops**
-
----
-
 ## 🧬 Key Insight
 
 High repetition is not always a problem.
