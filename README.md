@@ -103,7 +103,8 @@ Core
 LLM Integration
 ├── openaiF/
 │   └── engine.py
-│   └── gateway.py                # multimodal LLM evaluation
+│   └── gateway.py
+│   └── progress.py               # multimodal LLM evaluation
 
 Refinement
 ├── supplement/
