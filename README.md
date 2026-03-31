@@ -304,6 +304,7 @@ It introduces:
 * A shift from:
 
   error-based evaluation
+
   → to dynamic system analysis
 
 ---
