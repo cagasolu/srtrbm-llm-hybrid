@@ -166,8 +166,9 @@ The LLM is not used for generation, but for **analyzing the behavior of the mode
 
 An OpenAI multimodal LLM acts as an interpretive observer, analyzing the model’s behavior beyond traditional metrics. It evaluates collapse, diversity, and structural consistency through semantic and pattern-level reasoning.
 
-* In short:
-* The model generates. The LLM interprets.
+In short:
+
+The model generates. The LLM interprets.
 
 ---
 
