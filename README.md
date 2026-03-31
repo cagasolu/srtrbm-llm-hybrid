@@ -158,22 +158,15 @@ The LLM is not used for generation, but for **analyzing the behavior of the mode
 
 ### 🧠 Why use an LLM?
 
-Traditional metrics (MSE, entropy, etc.) are not always enough to understand:
+🔍 LLM Integration (OpenAI)
 
-* whether the system is collapsing
-* whether diversity is meaningful
-* whether outputs are structurally consistent
+An OpenAI multimodal LLM acts as an interpretation layer, analyzing the model’s behavior beyond traditional metrics.
 
-The LLM provides:
-
-* semantic interpretation
-* pattern-level reasoning
-* comparison between visual outputs
+It evaluates collapse, diversity, and structural consistency through semantic and pattern-level reasoning.
 
 In short:
 
-> The model generates.
-> The LLM interprets.
+The model generates. The LLM interprets.
 
 ---
 
