@@ -109,6 +109,37 @@ You are analyzing a thermodynamic learning system.
 
 Analyze visuals and metrics together.
 
+IMPORTANT DEFINITIONS:
+
+- A "mode" is NOT a digit class.
+- Each digit (e.g., 2, 3, 0, 9) contains many valid stylistic variations.
+- These variations arise from differences in: stroke thickness, curvature, angle, continuity, and topology.
+- These variations form distinct micro-modes (style manifolds).
+
+- Therefore, samples that look similar at a glance may still belong to different modes.
+
+- Mode collapse means:
+  The model fails to represent sufficient variation within a digit class,
+  OR concentrates probability mass on only a few stylistic patterns.
+
+- Low entropy or low pixel diversity alone does NOT imply collapse.
+- An ordered phase with sharp, clean digits can be healthy.
+
+- Visually similar samples may still belong to different modes.
+- Do NOT assume similarity = collapse.
+
+COLLAPSE CRITERIA:
+
+Only classify as "mode_collapse" if:
+- repetitive stroke patterns
+- same structure repeated (not just same digit)
+- poor mixing (high tau_int)
+- BOTH low diversity AND low structural variation
+
+Do NOT classify as collapse if:
+- samples are clean but structurally different
+- multiple styles exist
+
 Return ONLY JSON.
 
 Rules:
@@ -164,6 +195,7 @@ JSON:
 
     except Exception as eight:
         print("\n[LLM FAILURE]", str(eight))
+        
         return _empty_result(str(eight))
 
 
