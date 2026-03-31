@@ -10,7 +10,7 @@ authors:
   - family-names: "Süleymanoğlu"
     given-names: "Görkem Can"
 
-doi: 10.5281/zenodo.19211122
+doi: 10.5281/zenodo.19211121
 url: "https://doi.org/10.5281/zenodo.19211121"
 repository-code: "https://github.com/cagasolu/srtrbm-llm-hybrid"
 
@@ -21,7 +21,13 @@ abstract: >
 
 keywords:
   - SR-TRBM
-  - hybrid AI
-  - generative modeling
-  - LLM
-  - attractor dynamics
+  - Restricted Boltzmann Machines
+  - Large Language Models
+  - GPT
+  - Energy-Based Models
+  - Thermodynamic Learning
+  - Generative Modeling
+  - Attractor Dynamics
+  - Convergence Analysis
+  - Neural Refinement
+  - Multimodal AI
