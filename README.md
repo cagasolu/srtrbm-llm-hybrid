@@ -301,10 +301,7 @@ It introduces:
 
 * An LLM-based interpretation layer
 * A combination of physics, perception, and reasoning
-* A shift from:
-
-  error-based evaluation
-  → to dynamic system analysis
+* A shift from: error-based evaluation → to dynamic system analysis
 
 ---
 
