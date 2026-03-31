@@ -102,7 +102,8 @@ Core
 
 LLM Integration
 ├── openaiF/
-│   └── engine.py
+│   └── __init__.py
+│   └── client.py
 │   └── gateway.py
 │   └── progress.py               # multimodal LLM evaluation
 
@@ -112,16 +113,19 @@ Refinement
 
 Analysis & Diagnostics
 ├── analysis/
+│   └── __init__.py
 │   └── AutoGPU.py                # GPU orchestration
 
 Visualization
 ├── graphs/
+│   └── __init__.py
 │   ├── SrtrbmEnergy.py
 │   ├── SrtrbmMetrics.py
 │   └── SrtrbmVisualization.py
 
 Correction Modules
 ├── correction/
+│   └── __init__.py
 │   └── NO.py
 
 Additional Models
