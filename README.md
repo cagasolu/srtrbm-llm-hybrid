@@ -44,7 +44,7 @@ This project implements a hybrid intelligence pipeline that brings together:
 
 At the core of the system, a Boltzmann machine learns geometric representations of real-world objects. Instead of relying on large-scale data, it focuses on capturing structure from meaningful inputs observed on the fly, using energy-based dynamics to reach stable representations.
 
-In parallel, the learning process is continuously observed by a multimodal LLM (OpenAI GPT-5mini). The goal here is not generation but interpretation—translating what the model learns into something understandable, while also tracking convergence behavior and structural consistency.
+In parallel, the learning process is continuously observed by a multimodal LLM (OpenAI GPT-5). The goal here is not generation but interpretation—translating what the model learns into something understandable, while also tracking convergence behavior and structural consistency.
 
 Rather than a simple pipeline, this forms a feedback loop. Generation, refinement, and interpretation interact with each other, making the system behave more like a dynamic process than a static model.
 
@@ -160,7 +160,7 @@ The LLM is not used for generation, but for **analyzing the behavior of the mode
 
 🔍 LLM Integration (OpenAI)
 
-An OpenAI multimodal LLM acts as an interpretation layer, analyzing the model’s behavior beyond traditional metrics.
+An OpenAI multimodal LLM acts as an interpretive observer, analyzing the model’s behavior beyond traditional metrics.
 
 It evaluates collapse, diversity, and structural consistency through semantic and pattern-level reasoning.
 
