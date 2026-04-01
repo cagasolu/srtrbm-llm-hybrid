@@ -328,7 +328,7 @@ def evaluate(metrics_input, refined_img_path, perfect_img_path, client=None):
         final_conf = 0.7 * llm_conf + 0.3 * (1 - anasis_score)
         result["confidence"] = final_conf
 
-        if result["confidence"] < 0.25:
+        if result["confidence"] < 0.36:
             result["actions"] = {}
             result["reason"] = "low_confidence"
 
@@ -415,9 +415,9 @@ def ANASIS(text, metrics=None):
     final_score = max(0.0, min(1.0, final_score))
 
     if sim_healthy == 0:
-        consistency = 1.0 - final_score
+        consistency = abs(1.0 - final_score)
     else:
-        consistency = 0.999 - (sim_healthy + final_score)
+        consistency = abs(0.899 - (sim_healthy + final_score))
 
     consistency = max(0.0, min(1.0, consistency))
 
@@ -429,8 +429,8 @@ def ANASIS(text, metrics=None):
     )
 
     print(
-        f"[ANASIS] collapse={sim_collapse} "
-        f"stagnation={sim_stagnation} "
+        f"[ANASIS] stagnation={sim_stagnation} "
+        f"collapse={sim_collapse} "
         f"healthy={consistency} "
         f"→ final={final_verdict}"
     )
