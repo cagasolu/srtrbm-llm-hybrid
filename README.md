@@ -97,8 +97,8 @@ Latent Space → SR-TRBM → Generated Samples
 ## 📦 Project Structure
 
 ```
-Core
-├── srtrbm_project_core.py        # main pipeline (generation + metrics)
+Main Core
+├── srtrbm_project_core.py        # main pipeline (generation + metrics of Boltzmann machine)
 
 LLM Integration
 ├── openaiF/
@@ -128,11 +128,14 @@ Correction Modules
 │   └── __init__.py
 │   └── NO.py
 
+GPT Classes
+├── yaml/
+│   └── acting.yaml
+│   └── perception.yaml
+
 Additional Models
 ├── zeta_mnist_hybrid.pt
 ├── stan.dgts
-├── acting.yaml
-├── perception.yaml
 ```
 
 <details>
