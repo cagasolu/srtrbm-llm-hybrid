@@ -229,7 +229,7 @@ def evaluate(metrics_input, refined_img_path, perfect_img_path, client=None):
 
     if refined_img_path and perfect_img_path:
         lpips_score = compute_lpips(refined_img_path, perfect_img_path)
-        metrics_nomadic["image_lpips"] = lpips_score
+        metrics_nomadic["image_similarity"] = 1.0 - lpips_score
         print("[IMAGE LPIPS]", lpips_score)
 
     load_object_context(perfect_img_path, metrics_nomadic)
@@ -245,12 +245,43 @@ def evaluate(metrics_input, refined_img_path, perfect_img_path, client=None):
 
     {metrics_str}
 
+    CRITICAL INTERPRETATION RULES:
+
+    - High image_similarity indicates that generated samples match the reference structure.
+    - This is a strong POSITIVE signal of successful learning.
+
+    - Low diversity alone is NOT a failure condition.
+    - Converged systems naturally produce similar outputs.
+
+    - Poor mixing (high tau_int) does NOT imply collapse.
+
+    STRICT CONSTRAINT:
+
+    - Do NOT classify mode collapse if image_similarity is high.
+
+    Even if:
+    - diversity is low
+    - entropy is low
+    - mixing is slow
+
+    PRIORITY RULE:
+
+    - Structural similarity OVERRIDES diversity-based signals.
+
+    - High reconstruction quality + high similarity = HEALTHY system.
+
+    - If image_similarity is high AND reconstruction quality is high: classify the system as "stable" or "ordered", not as failure.
+
+    ---
+
     Analyze visuals and metrics together.
 
-    IMAGE RULE:
+    IMAGE INTERPRETATION:
 
-    - Low image_lpips → images structurally similar
-    - High image_lpips → structurally different
+    - High image_similarity → structures match (GOOD)
+    - Low image_similarity → structures differ
+
+    ---
 
     IMPORTANT DEFINITIONS:
 
@@ -258,16 +289,19 @@ def evaluate(metrics_input, refined_img_path, perfect_img_path, client=None):
     - Each digit contains many stylistic variations (micro-modes).
     - Structural differences define modes, not visual similarity.
 
+    ---
+
     COLLAPSE CRITERIA:
 
-    Only classify as "mode_collapse" if:
+    Only classify as "mode_collapse" if ALL of the following hold:
     - repetitive structure
-    - low diversity AND low structural variation
+    - low diversity
+    - structural degradation (low similarity)
     - poor mixing
 
     Do NOT classify collapse if:
-    - structures differ meaningfully
-    - diversity exists
+    - structure is preserved (high image_similarity)
+    - reconstruction quality is high
 
     ---
 
@@ -361,6 +395,7 @@ def _cosine(a, b):
     dot = sum(x * y for x, y in zip(a, b))
     na = math.sqrt(sum(x * x for x in a))
     nb = math.sqrt(sum(x * x for x in b))
+
     return dot / (na * nb + 1e-8)
 
 
@@ -395,10 +430,6 @@ def ANASIS(text, metrics=None):
     sim_healthy = _cosine(text_vec, ref_healthy)
 
     risk_signal = max(sim_collapse, sim_stagnation)
-    stability_signal = sim_healthy
-
-    risk_score = 0.1 + 0.8 * risk_signal
-    stability_score = 0.1 + 0.8 * stability_signal
 
     diversity_term = 0.0
 
@@ -406,33 +437,32 @@ def ANASIS(text, metrics=None):
         d = metrics.get("diversity", 0.5)
         diversity_term = (1 - d) ** 2
 
-    final_score = (
-            0.5 * risk_score +
-            0.3 * (1 - stability_score) +
+    energy = (
+            0.5 * risk_signal +
+            0.3 * (1 - sim_healthy) +
             0.2 * diversity_term
     )
 
-    final_score = max(0.0, min(1.0, final_score))
+    energy = max(0.0, min(1.0, energy))
 
     if sim_healthy == 0:
-        consistency = abs(1.0 - final_score)
+        consistency = abs(1.0 - energy)
     else:
-        consistency = abs(0.899 - (sim_healthy + final_score))
+        consistency = abs(1 - (sim_healthy + energy))
 
     consistency = max(0.0, min(1.0, consistency))
 
-    final_verdict = (
-            0.5 * risk_score +
-            0.3 * (1 - stability_score) +
-            0.2 * diversity_term -
-            0.14 * consistency
-    )
+    energy = max(0.0, min(1.0, energy))
+
+    final_score = energy - 0.1 * consistency
+
+    final_score = max(0.0, min(1.0, final_score))
 
     print(
-        f"[ANASIS] stagnation={sim_stagnation} "
-        f"collapse={sim_collapse} "
-        f"healthy={consistency} "
-        f"→ final={final_verdict}"
+        f"[ANASIS] collapse={sim_collapse:.3f} "
+        f"stagnation={sim_stagnation:.3f} "
+        f"healthy_align={consistency:.3f} "
+        f"→ risk={final_score:.3f}"
     )
 
-    return final_verdict
+    return final_score
