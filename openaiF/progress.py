@@ -3,12 +3,6 @@ import yaml
 import json
 from typing import Dict, Any, Tuple
 
-recent_action_intensity = {
-    "temperature": 0.0,
-    "noise": 0.0,
-    "gibbs_steps": 0.0
-}
-
 ACTION_KEY_MAPPING = {
     "increase_temperature": "temperature",
     "increase_noise": "noise",
@@ -81,11 +75,12 @@ def evaluate_condition(cond: str, metrics: Dict[str, Any]) -> bool:
 
 
 def interpret_llm_output(raw_text: str) -> Tuple[str, float, Dict[str, bool]]:
-
+    # noinspection PyBroadException
     try:
         data = json.loads(raw_text)
         decision = data.get("decision", "continue")
         confidence = float(data.get("confidence", 0.0))
+
         actions = data.get("actions", {})
 
         return decision, confidence, actions
@@ -123,26 +118,45 @@ def interpret_llm_output(raw_text: str) -> Tuple[str, float, Dict[str, bool]]:
     return decision, confidence, actions
 
 
-def apply_action_dampening(actions: Dict[str, bool]) -> Tuple[Dict[str, bool], Dict[str, int]]:
+def compute_continuous_intensity(actions, metrics, confidence):
     intensity = {
-        "temperature": 0,
-        "noise": 0,
-        "gibbs_steps": 0
+        "temperature": 0.0,
+        "noise": 0.0,
+        "gibbs_steps": 0.0
+    }
+
+    std = float(metrics.get("std", 0.0))
+    entropy = float(metrics.get("entropy", 0.0))
+    delta_w = float(metrics.get("delta_w", 0.0))
+
+    flip_rate = float(metrics.get("flip_rate", 1.0))
+
+    stagnation = metrics.get("history", {}).get("stagnation", False)
+
+    temp_signal = (1 - std + 1 - entropy) / 2
+
+    noise_signal = (1 - delta_w) + (0.5 if stagnation else 0.0)
+    
+    noise_signal = min(noise_signal, 1.0)
+    gibbs_signal = (1 - flip_rate)
+
+    signals = {
+        "increase_temperature": temp_signal,
+        "increase_noise": noise_signal,
+        "increase_gibbs_steps": gibbs_signal
     }
 
     for action_name, active in actions.items():
         key = ACTION_KEY_MAPPING[action_name]
 
-        if active:
-            intensity[key] = 1
-        else:
-            intensity[key] = 0
+        intensity[key] = signals[action_name] * confidence
 
-    return actions, intensity
+    return intensity
 
 
 def apply_acting_policy(metrics: Dict[str, Any], result: Dict[str, Any], acting_yaml: Dict[str, Any]) -> Dict[str, Any]:
     policies = acting_yaml.get("acting_system", {}).get("acting_policy", [])
+
     actions = result.get("actions", {})
 
     for policy in policies:
@@ -215,6 +229,7 @@ def enforce_constraints(metrics: Dict[str, Any], result: Dict[str, Any], acting_
 
 def request_llm_guidance(metrics: Dict[str, Any], client) -> Dict[str, Any]:
     acting_yaml = load_acting_yaml()
+
     acting_block = build_acting_block(acting_yaml)
 
     response = client.create_response(
@@ -244,13 +259,11 @@ def request_llm_guidance(metrics: Dict[str, Any], client) -> Dict[str, Any]:
     raw = response.output_text.strip()
 
     decision, confidence, actions = interpret_llm_output(raw)
-    actions, intensity = apply_action_dampening(actions)
 
     return {
         "decision": decision,
         "confidence": confidence,
         "actions": actions,
-        "intensity - boolean": intensity
     }
 
 
@@ -261,8 +274,15 @@ def llm_determine(metrics: Dict[str, Any], _trend=None, client=None) -> Dict[str
     acting_yaml = load_acting_yaml()
 
     result = request_llm_guidance(metrics, client)
-    
+
     result = apply_acting_policy(metrics, result, acting_yaml)
+
     result = enforce_constraints(metrics, result, acting_yaml)
+
+    result["intensity"] = compute_continuous_intensity(
+        result["actions"],
+        metrics,
+        result["confidence"]
+    )
 
     return result
