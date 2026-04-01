@@ -131,6 +131,8 @@ Correction Modules
 Additional Models
 ├── zeta_mnist_hybrid.pt
 ├── stan.dgts
+├── acting.yaml
+├── perception.yaml
 ```
 
 <details>
@@ -143,6 +145,7 @@ Additional Models
 ├── graphs
 ├── openaiF
 ├── supplement
+├── yaml
 ├── srtrbm_project_core.py
 ├── stan.dgts
 └── zeta_mnist_hybrid.pt
