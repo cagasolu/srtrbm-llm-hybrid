@@ -1,0 +1,165 @@
+Training:  15%|█████▋                                | 60/400 [00:37<03:02,  1.86it/s, T=0.911, flip=0.092, beta=46.883]
+
+[LLM TRIGGER] epoch=60 | std=3.693960 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.88, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'intensity - boolean': {'temperature': 1, 'noise': 1, 'gibbs_steps': 1}, 'note': 'healthy_learning'}
+
+[LLM DECISION] continue | confidence=0.880
+[LLM] Continue
+Training:  30%|███████████                          | 120/400 [01:42<02:30,  1.85it/s, T=0.908, flip=0.076, beta=54.215]
+
+[LLM TRIGGER] epoch=120 | std=0.276977 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.8, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'intensity - boolean': {'temperature': 0, 'noise': 0, 'gibbs_steps': 0}, 'note': 'healthy_learning'}
+
+[LLM DECISION] continue | confidence=0.800
+[LLM] Continue
+Training:  45%|████████████████▋                    | 180/400 [02:29<02:00,  1.82it/s, T=0.909, flip=0.069, beta=59.516]
+
+[LLM TRIGGER] epoch=180 | std=0.285180 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.87, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'intensity - boolean': {'temperature': 0, 'noise': 0, 'gibbs_steps': 0}, 'note': 'healthy_learning'}
+
+[LLM DECISION] continue | confidence=0.870
+[LLM] Continue
+Training:  60%|██████████████████████▏              | 240/400 [03:29<01:26,  1.85it/s, T=0.912, flip=0.064, beta=63.624]
+
+[LLM TRIGGER] epoch=240 | std=0.264110 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.88, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'intensity - boolean': {'temperature': 0, 'noise': 0, 'gibbs_steps': 0}, 'note': 'healthy_learning'}
+
+[LLM DECISION] continue | confidence=0.880
+[LLM] Continue
+Training:  75%|███████████████████████████▊         | 300/400 [04:19<00:53,  1.89it/s, T=0.916, flip=0.060, beta=66.990]
+
+[LLM TRIGGER] epoch=300 | std=0.314207 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.92, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'intensity - boolean': {'temperature': 0, 'noise': 0, 'gibbs_steps': 0}, 'note': 'healthy_learning'}
+
+[LLM DECISION] continue | confidence=0.920
+[LLM] Continue
+Training:  90%|█████████████████████████████████▎   | 360/400 [05:15<00:21,  1.83it/s, T=0.920, flip=0.057, beta=69.839]
+
+[LLM TRIGGER] epoch=360 | std=0.305236 | stagnation=False
+
+[LLM RAW]
+{'decision': 'continue', 'confidence': 0.92, 'actions': {'increase_temperature': False, 'increase_noise': False, 'increase_gibbs_steps': False}, 'intensity - boolean': {'temperature': 0, 'noise': 0, 'gibbs_steps': 0}, 'note': 'healthy_learning'}
+
+[LLM DECISION] continue | confidence=0.920
+[LLM] Continue
+Training: 100%|█████████████████████████████████████| 400/400 [06:03<00:00,  1.10it/s, T=0.923, flip=0.055, beta=71.508]
+
+[GPU 0] Running AIS...
+✔ AIS finished in 29.13 seconds
+
+Exact Energy Refinement Diagnostics
+-----------------------------------
+Free Energy Before : -485.119385
+Free Energy After  : -539.611572
+ΔF (After-Before)  : -54.492188
+
+Physical Refinement Diagnostics
+Primary magnetic susceptibility: 0.5115285515785217
+Binder cumulant (1): 0.6550817489624023
+
+Secondary magnetic susceptibility: 0.5114245414733887
+Binder cumulant (2): 0.6563000679016113
+
+Running energy analysis ↓
+
+
+Running diagnostics with the following calculations ↙
+
+✔ Energy distribution finished in 105.65 seconds
+✔ Energy landscape extremes finished in 0.04 seconds
+✔ Phase diagram finished in 0.36 seconds
+✔ RBM filters finished in 0.06 seconds
+✔ Sample quality metrics finished in 8.34 seconds
+
+Diagnostics completed in 115.61 seconds
+
+GPU Energy Used : 17961.63 Joules
+
+Device: cuda
+, ↘
+
+samples_gpu0_seed1_refined.png → Patches: torch.Size([1200, 1, 28, 28])
+samples_gpu0_seed1_refined.png → Avg MSE: 0.17006283
+Saved: samples_gpu0_seed1_perfect.png
+
+Device: cuda
+, ↘
+
+samples_prof_gpu0_seed1_refined.png → Patches: torch.Size([1200, 1, 28, 28])
+samples_prof_gpu0_seed1_refined.png → Avg MSE: 0.16971904
+Saved: samples_prof_gpu0_seed1_perfect.png
+
+DEBUG perfect_img_path: samples_prof_gpu0_seed1_perfect.png
+[IMAGE LPIPS] 0.16889213025569916
+
+[LLM RAW OUTPUT]
+ The refined outputs (X) are structurally close to the reference (Y): image_lpips is low (0.169) and visually the grids show many corresponding micro-structural variants rather than a single repeated stroke. Diversity metric is low (0.195) and entropy has dropped, but samples still exhibit a range of distinct local stroke/junction patterns, so I do not see wholesale mode collapse. Mixing appears suboptimal (mcmc_tau_int ~20), and the system is actively learning and heating (learning_active=true, heating=true), so the safest intervention is to improve sampling (more Gibbs/MCMC steps) rather than declaring collapse.
+
+{
+"analysis": "X is structurally similar to Y (low image_lpips) and preserves multiple distinct local structural variants; diversity is low but not indicative of repetitive identical structure. MCMC autocorrelation is high, suggesting poor mixing which can under-represent modes. Learning is active and the system is heating, so increase sampling to improve coverage rather than assuming collapse.",
+"regime": "critical",
+"phase": "learning",
+"failure": "none",
+"action": "increase_gibbs_steps",
+"confidence": 0.73
+}
+[ANASIS] collapse=0.4082482887971963 stagnation=0.23570225983996032 healthy=0.46670068448112145 → final=0.46796121969152155
+
+[LLM CLEAN RESULT]
+ {'regime': 'critical', 'phase': 'learning', 'failures': [], 'actions': {'increase_gibbs_steps': True}, 'confidence': 0.6706116340925435, 'analysis': 'X is structurally similar to Y (low image_lpips) and preserves multiple distinct local structural variants; diversity is low but not indicative of repetitive identical structure. MCMC autocorrelation is high, suggesting poor mixing which can under-represent modes. Learning is active and the system is heating, so increase sampling to improve coverage rather than assuming collapse.', 'reason': 'json'}
+[ANASIS] collapse=0.4082482887971963 stagnation=0.23570225983996032 healthy=0.5167006844811215 → final=0.41096121969152155
+[ANALYSIS SIGNAL] 0.411
+[LLM OUTPUT SAVED] → llm_output_gpu0_seed1.json
+
+[LLM RESULT]
+
+{
+  "regime": "critical",
+  "phase": "learning",
+  "failures": [],
+  "actions": {
+    "increase_gibbs_steps": true
+  },
+  "confidence": 0.6706116340925435,
+  "analysis": "X is structurally similar to Y (low image_lpips) and preserves multiple
+distinct local structural variants; diversity is low but not indicative of repetitive
+identical structure. MCMC autocorrelation is high, suggesting poor mixing which can under-
+represent modes. Learning is active and the system is heating, so increase sampling to
+improve coverage rather than assuming collapse.",
+  "reason": "json"
+}
+Hybrid Thermodynamic RBM Final Results
+Seed: 1 | GPU: 0
+Final Temperature        : 0.922528
+Weight Norm              : 65.967957
+Effective Beta           : 71.507803
+Train Log-Likelihood     : -676.593323
+Test Log-Likelihood      : -675.912415
+Train Pseudo-Likelihood  : -5.925153
+Test Pseudo-Likelihood   : -5.901226
+Reconstruction MSE       : 0.015972
+Reconstruction Accuracy  : 0.980378
+Mean Data Energy         : -517.092041
+Mean Model Energy        : -484.805786
+Energy Gap               : 32.286255
+GPU Energy Used          : 17961.63 J
+Log Partition (AIS)      : 1193.685425
+AIS ESS                  : 651.29
+AIS Log-Weight Variance  : 1.586198
+MCMC tau_int             : 20.39
+MCMC ESS                 : 941.74
+Pixel Entropy            : 0.294151
+Sample Diversity         : 0.195083
+Mean Distribution L2     : 0.090988
+Professional Samples File: samples_prof_gpu0_seed1.png
+Generated Samples File   : samples_gpu0_seed1.png

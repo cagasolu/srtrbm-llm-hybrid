@@ -1,0 +1,11 @@
+{
+  "regime": "critical",
+  "phase": "learning",
+  "failures": [],
+  "actions": {
+    "increase_gibbs_steps": true
+  },
+  "confidence": 0.6706116340925435,
+  "analysis": "X is structurally similar to Y (low image_lpips) and preserves multiple distinct local structural variants; diversity is low but not indicative of repetitive identical structure. MCMC autocorrelation is high, suggesting poor mixing which can under-represent modes. Learning is active and the system is heating, so increase sampling to improve coverage rather than assuming collapse.",
+  "reason": "json"
+}
