@@ -105,6 +105,7 @@ LLM Integration
 │   └── __init__.py
 │   └── client.py
 │   └── gateway.py
+│   └── philosophy.py
 │   └── progress.py               # multimodal LLM evaluation
 
 Refinement
