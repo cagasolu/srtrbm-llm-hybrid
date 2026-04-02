@@ -83,7 +83,7 @@ This allows us to distinguish between:
 ## ⚙️ System Topology
 
 ```
-Latent Space → SR-TRBM → Generated Samples
+Latent Space → SR-TRBM → Generated Samples → Conclusion
 ↓
 SR-TRBM
 ↓
@@ -91,9 +91,13 @@ Structural Refinement
 ↓
 Metrics Extraction + LLM
 ↓
+Generated Samples
+↓
 Interpretation → Convergence Analysis
 ↓
 Epistemic Control (implicit)
+↓
+Conclusion
 ```
 
 ---
