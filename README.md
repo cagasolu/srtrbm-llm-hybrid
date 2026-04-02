@@ -84,12 +84,16 @@ This allows us to distinguish between:
 
 ```
 Latent Space → SR-TRBM → Generated Samples
-                          ↓
-                         Cluster Refinement
-                          ↓
-                         LLM Multimodal Interpretation
-                          ↓
-                         Attractor / Convergence Analysis
+↓
+SR-TRBM
+↓
+Structural Refinement
+↓
+Metrics Extraction + LLM
+↓
+Interpretation → Convergence Analysis
+↓
+Epistemic Control (implicit)
 ```
 
 ---
