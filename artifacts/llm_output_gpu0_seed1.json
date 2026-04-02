@@ -1,0 +1,16 @@
+{
+  "analysis": "Refined outputs (X) visually align strongly with the reference manifold (Y) and image_similarity is high (0.831). Structural elements are preserved across samples, so there is no evidence of structural degradation or mode collapse despite low diversity and low entropy. Learning is active (learning_signal 0.23, learning_active true, heating true) and the system shows high inverse temperature (beta ~71.5) and low current entropy → an ordered structural regime. Weaknesses: mixing is slow (mcmc_tau_int ~20.4) and diversity is low, which could risk over-ordering if maintained, but by the strict rules high similarity + good reconstruction rules out collapse. Overall: active learning in an ordered regime with slow mixing and modest risk of over-ordering.",
+  "regime": "learning",
+  "phase": "ordered",
+  "scores": {
+    "temperature": 0.92,
+    "noise": 0.2,
+    "gibbs": 0.2
+  },
+  "risk": {
+    "stagnation": 0.05,
+    "collapse": 0.01,
+    "over_ordering": 0.25
+  },
+  "confidence": 0.6644518357935263
+}
