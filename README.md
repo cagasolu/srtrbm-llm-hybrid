@@ -98,45 +98,83 @@ Latent Space → SR-TRBM → Generated Samples
 
 ```
 Main Core
-├── srtrbm_project_core.py        # main pipeline (generation + metrics of Boltzmann machine)
+├── srtrbm_project_core.py
+│   Central orchestration module handling generation, sampling, and energy-based metrics
+│   of the Boltzmann machine.
 
 LLM Integration
 ├── openaiF/
-│   └── __init__.py
-│   └── client.py
-│   └── gateway.py
-│   └── philosophy.py
-│   └── progress.py               # multimodal LLM evaluation
+│   ├── __init__.py
+│   │   Unified interface for LLM-based evaluation and control.
+│   │
+│   ├── client.py
+│   │   Fault-tolerant OpenAI client with retry and fallback handling.
+│   │
+│   ├── gateway.py
+│   │   Core interpretation engine combining metrics, images, and perceptual similarity (LPIPS)
+│   │   into structured semantic analysis.
+│   │
+│   ├── philosophy.py
+│   │   Epistemic controller enabling probabilistic, uncertainty-driven decision making.
+│   │
+│   └── progress.py
+│       The decision layer translates LLM outputs into actionable control signals using
+│       policies, constraints, and multimodal evaluation.
 
 Refinement
 ├── supplement/
-│   └── cluster.py                # structural refinement
+│   └── cluster.py
+│       Embedding-based structural refinement module. Projects generated samples onto a
+│       learned manifold and reconstructs them via prototype similarity and spatial filtering.
 
 Analysis & Diagnostics
 ├── analysis/
-│   └── __init__.py
-│   └── AutoGPU.py                # GPU orchestration
+│   ├── __init__.py
+│   │   Exposes analysis utilities for integration with the main pipeline.
+│   │
+│   └── AutoGPU.py
+│       GPU energy tracking via NVML, monitoring real-time power usage and estimating
+│       total energy consumption during execution.
 
-Visualization
+Visualization & Diagnostics
 ├── graphs/
-│   └── __init__.py
+│   ├── __init__.py
+│   │   Aggregates visualization and diagnostic utilities into a unified interface.
+│   │
 │   ├── SrtrbmEnergy.py
+│   │   Energy landscape analysis and data–model energy distribution comparison.
+│   │
 │   ├── SrtrbmMetrics.py
+│   │   Statistical diagnostics, including entropy, diversity, and phase transition analysis.
+│   │
 │   └── SrtrbmVisualization.py
+│       Visualization of generated samples, RBM filters, and fantasy particles.
 
 Correction Modules
 ├── correction/
-│   └── __init__.py
+│   ├── __init__.py
+│   │   Exposes refinement and correction utilities for integration into the pipeline.
+│   │
 │   └── NO.py
+│       Implements energy-based and spatial refinement methods to stabilize and
+│       denoise generated samples.
 
-GPT Classes
+GPT Configuration
 ├── yaml/
-│   └── acting.yaml
+│   ├── acting.yaml
+│   │   Defines epistemic control policies that translate uncertainty into
+│   │   probabilistic system interventions.
+│   │
 │   └── perception.yaml
+│       Specifies structural reasoning rules for interpreting model outputs and
+│       distinguishing collapse from structured convergence.
 
-Additional Models
+Assets
 ├── zeta_mnist_hybrid.pt
-├── stan.dgts
+│   Pretrained hybrid model used for generation and evaluation.
+│
+└── stan.dgts
+    Structured dataset used for training and inference.
 ```
 
 <details>
