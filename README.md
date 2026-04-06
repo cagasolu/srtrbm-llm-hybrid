@@ -1,6 +1,6 @@
-# SR-TRBM + LLM Hybrid Intelligence System
+# MYRA: Hybrid Intelligence System
 
-A hybrid intelligence system that integrates thermodynamic energy-based generation (SR-TRBM), deterministic neural refinement, and LLM-driven multimodal interpretation within a closed-loop framework.
+A hybrid intelligence system where thermodynamic energy-based generation (SR-TRBM) and LLM-assisted multimodal interpretation are unified under the MYRA architecture within a closed-loop framework.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211121.svg)](https://doi.org/10.5281/zenodo.19211121)
 
@@ -8,7 +8,10 @@ A hybrid intelligence system that integrates thermodynamic energy-based generati
 ![CUDA](https://img.shields.io/badge/CUDA-enabled-green)
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 
-> The model generates. The system interprets. The pipeline understands.
+> MYRA generates.  
+> Energy guides.  
+> Structure emerges.  
+> The system understands.
 
 ---
 
@@ -36,21 +39,30 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 ## 🚀 Overview
 
-This project implements a hybrid intelligence pipeline that brings together:
+This project implements MYRA (Model-Yielded Reasoning Architecture)—a hybrid intelligence system that integrates energy-based generation, structural self-refinement, and LLM-assisted interpretation within a closed-loop framework. At its core, MYRA incorporates a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative engine. This component learns structured representations by organizing data within an energy landscape, converging toward stable configurations through stochastic dynamics. MYRA is a post-processing module and the governing architecture of the system. It defines how generated states are evaluated, refined, and interpreted. Structural refinement in MYRA operates as a projection mechanism:
 
-* Energy-based generative modeling (SR-TRBM)
-* CNN-based structural refinement
-* Multimodal LLM interpretation
+- enforcing connectivity
+- preserving internal consistency
+- aligning samples with learned attractor structures
 
-At the core of the system, a Boltzmann machine learns geometric representations of real-world objects. Instead of relying on large-scale data, it focuses on capturing structure from meaningful inputs observed on the fly, using energy-based dynamics to reach stable representations.
+This process does not introduce new information. It reveals and stabilizes what the model has already learned. To extend interpretability, MYRA incorporates an external multimodal LLM (OpenAI GPT) as an analytical layer.
 
-In parallel, the learning process is continuously observed by a multimodal LLM (OpenAI GPT-5). The goal here is not generation but interpretation—translating what the model learns into something understandable, while also tracking convergence behavior and structural consistency.
+The LLM does not participate in generation. 
 
-Rather than a simple pipeline, this forms a feedback loop. Generation, refinement, and interpretation interact with each other, making the system behave more like a dynamic process than a static model.
+Instead, it provides system-level interpretation by:
 
-Our model is an evolving system. The broader goal is to scale the system into a larger and more efficient architecture. We aim to organize real-world data at a lower cost while maintaining strong interpretability.
+- evaluating convergence dynamics
+- assessing structural coherence
+- analyzing emergent patterns
 
-The code is shared in a semi-open structure, and the use of different parts of the system is encouraged within the scope of the provided license and legal framework.
+The system operates as a continuous feedback loop:
+
+- MYRA generates (via SR-TRBM)
+- Energy constraints guide the state space.
+- MYRA refines structural consistency.
+- The LLM interprets system behavior.
+
+This results in a unified intelligence framework where generation, refinement, and interpretation are not separate stages but tightly coupled processes. The project is a semi-open, complex AI system designed to learn from real-world data through the interaction of thermodynamic modeling, structural reasoning, and external interpretive intelligence.
 
 ---
 
@@ -66,38 +78,42 @@ The associated arXiv publication can be regarded as the theoretical precursor to
 
 ## 🧠 Core Idea
 
-The system analyzes generative behavior through:
+MYRA analyzes generative behavior as a function of energy-constrained structural dynamics:
 
-* Attractor dynamics
-* Convergence behavior
-* Structured diversity
-* Energy landscape properties
+- Attractor formation and stability  
+- Convergence behavior under stochastic transitions  
+- Structured diversity across samples  
+- Energy landscape organization  
 
-This allows us to distinguish between:
+This enables a clear distinction between:
 
-* ❌ Mode collapse
-* ✅ Attractor-driven refinement
+- ❌ Mode collapse (degenerate convergence)  
+- ✅ Attractor-driven refinement (structured convergence)  
 
 ---
 
 ## ⚙️ System Topology
 
 ```
-Latent Space → SR-TRBM → Generated Samples → Conclusion
+Latent Space
 ↓
-SR-TRBM
+SR-TRBM (Generative Engine)
 ↓
-Structural Refinement
+Sampled States
 ↓
-Metrics Extraction + LLM
+MYRA (Structural Reasoning & Refinement)
 ↓
-Generated Samples
+Refined States
 ↓
-Interpretation → Convergence Analysis
+Metrics Extraction
 ↓
-Epistemic Control (implicit)
+LLM (Interpretation Layer)
 ↓
-Conclusion
+Convergence & Structure Analysis
+↓
+Epistemic Control (implicit, MYRA-governed)
+↓
+Final Output / Conclusion
 ```
 
 ---
@@ -119,15 +135,10 @@ LLM Integration
 │   │   Fault-tolerant OpenAI client with retry and fallback handling.
 │   │
 │   ├── gateway.py
-│   │   Core interpretation engine combining metrics, images, and perceptual similarity (LPIPS)
-│   │   into structured semantic analysis.
+│   │   Multimodal interpretation engine combining metrics and LPIPS-based similarity.
 │   │
-│   ├── philosophy.py
-│   │   Epistemic controller enabling probabilistic, uncertainty-driven decision making.
-│   │
-│   └── progress.py
-│       The decision layer translates LLM outputs into actionable control signals using
-│       policies, constraints, and multimodal evaluation.
+│   ├── hook.py
+│   │   Epistemic controller for evidence-bounded, uncertainty-aware decisions.
 
 Refinement
 ├── supplement/
@@ -141,7 +152,7 @@ Analysis & Diagnostics
 │   │   Exposes analysis utilities for integration with the main pipeline.
 │   │
 │   └── AutoGPU.py
-│       GPU energy tracking via NVML, monitoring real-time power usage and estimating
+│       GPU energy tracking via NVML, monitoring real-time power usage, and estimating
 │       total energy consumption during execution.
 
 Visualization & Diagnostics
@@ -169,13 +180,9 @@ Correction Modules
 
 GPT Configuration
 ├── yaml/
-│   ├── acting.yaml
-│   │   Defines epistemic control policies that translate uncertainty into
-│   │   probabilistic system interventions.
-│   │
-│   └── perception.yaml
-│       Specifies structural reasoning rules for interpreting model outputs and
-│       distinguishing collapse from structured convergence.
+│   ├── perception.yaml
+│   │   Specifies structural reasoning rules for interpreting model outputs and
+│   │   distinguishing collapse from structured convergence.
 
 Assets
 ├── zeta_mnist_hybrid.pt
@@ -207,31 +214,61 @@ Assets
 
 ## 🔍 LLM Integration (OpenAI)
 
-This system uses an **OpenAI LLM (multimodal)** as an interpretation layer.
+MYRA incorporates an OpenAI multimodal LLM as an external interpretive layer.
 
-The LLM is not used for generation, but for **analyzing the behavior of the model**.
+The LLM is not used for generation. 
+
+Its role is to analyze the system behavior under explicit structural and epistemic constraints.
 
 ---
 
-### 🧠 Why use an LLM?
+### 🧠 Role of the LLM
 
-🔍 LLM Integration (OpenAI)
+Within MYRA, the LLM functions as a constraint-aware evaluator, combining:
 
-An OpenAI multimodal LLM acts as an interpretive observer, analyzing the model’s behavior beyond traditional metrics. It evaluates collapse, diversity, and structural consistency through semantic and pattern-level reasoning.
+- quantitative metrics (energy, diversity, similarity)
+- structural signals (refined outputs)
+- multimodal inputs (image + statistics)
 
-In short:
+It performs system-level interpretation by:
 
-The model generates. The LLM interprets.
+- evaluating convergence dynamics
+- distinguishing collapse vs. structured convergence
+- assessing structural consistency across samples
+- reasoning over attractor behavior and energy organization
+
+Importantly, interpretation is not free-form.
+
+It is guided by strict principles defined in the system:
+
+- structural similarity overrides weak diversity signals
+- refinement reveals true structural model
+- collapse requires simultaneous structural degradation
+
+These constraints ensure that the LLM behaves as a bounded reasoning component, not a generative oracle.
+
+---
+
+### 🔁 Epistemic Constraint
+
+The LLM’s confidence is explicitly limited by available evidence:
+
+> confidence ≤ evidence
+
+This prevents overconfident interpretations and enforces alignment between:
+
+- observed metrics
+- visual structure
+- inferred system state
 
 ---
 
 ### 🔑 API Key Requirement
 
-To run the LLM analysis, you must provide an OpenAI API key.
-
-Set it using:
+To run LLM-based analysis, provide your OpenAI API key:
 
 ```bash
+
 export OPENAI_API_KEY=your_key_here
 ```
 
@@ -272,9 +309,7 @@ The LLM processes both:
 
 ## 🧬 Key Insight
 
-High repetition is not always a problem.
-
-In many cases, it actually means the system has learned a strong internal structure.
+High repetition is not always a problem. In many cases, it actually means the system has learned a strong internal structure.
 
 ```
 multiple stochastic variations → converge → stable prototypes
@@ -284,39 +319,80 @@ multiple stochastic variations → converge → stable prototypes
 
 ## 🔒 Model & Training Policy
 
-This repository provides access to the **trained model and inference pipeline**.
+This repository provides controlled access to MYRA, including its inference pipeline and evaluation framework.
 
-However, the **full training process and optimization details are not publicly released**.
-
-### Available
-
-* ✅ Pre-trained model weights
-* ✅ Inference/generation pipeline
-* ✅ LLM-based multimodal analysis
-
-### Not Included
-
-* ❌ Full training procedure
-* ❌ Optimization strategies
-* ❌ Internal training dynamics
+The project follows a semi-open paradigm: core system behavior is observable, but full training dynamics and optimization strategies remain restricted.
 
 ---
 
-## 🧠 Model Overview
+### ✅ Available
 
-The system is built on a custom embedding-based neural architecture, including:
+The following components are fully accessible:
 
-* Residual convolutional blocks
-* Metric learning (similarity-based loss)
-* Embedding normalization
-* Nearest-neighbor reasoning
+- Pre-trained model weights (SR-TRBM core)
+- Inference and generation pipeline
+- MYRA structural refinement mechanism (inference-time behavior)
+- LLM-based multimodal evaluation framework
+- Metrics computation (e.g., diversity, similarity, convergence signals)
+- Epistemic evaluation logic (evidence-constrained interpretation)
+- YAML-based structural principles and constraint definitions
 
-Training involves:
+---
 
-* Data augmentation (affine + radial attention)
-* Metric learning constraints
-* Dataset correction loop
-* Iterative refinement and fine-tuning
+### ⚠️ Partially Exposed
+
+These components are visible at a high level but not fully disclosed:
+
+- Training objectives and loss shaping strategy
+- Energy scheduling and thermodynamic control logic
+- Refinement dynamics during training vs inference
+- Internal calibration of metrics and thresholds
+- LLM prompting strategy and constraint tuning
+
+---
+
+### ❌ Not Included
+
+The following are intentionally withheld:
+
+- Full training pipeline and data flow
+- Optimization strategies and hyperparameter search
+- Internal training dynamics and update rules
+- Proprietary heuristics for stability and convergence
+- Dataset construction and curation pipeline
+- CNN-based supporting architectures used within the model
+- Embedding mechanisms and DGTS-based internal data structures
+- Exact prompt engineering and internal processing details of OpenAI GPT usage
+- Prompt-to-response transformation strategies and orchestration logic
+
+---
+
+### 🧠 Rationale
+
+MYRA is designed as a research-grade hybrid intelligence system, where
+
+- generation (SR-TRBM)
+- structural reasoning (MYRA)
+- interpretation (LLM)
+
+are tightly coupled.
+
+Releasing only the inference layer allows:
+- reproducibility of observed behavior
+- evaluation of system outputs
+- analysis of structural and epistemic properties
+
+while preserving the integrity of the underlying training methodology.
+
+---
+
+### ⚖️ Philosophy
+
+This project adopts a controlled transparency approach:
+
+> Behavior is open.  
+> Mechanism is partially open.  
+> Optimization remains closed.
 
 ---
 
@@ -341,22 +417,6 @@ export OPENAI_API_KEY=your_key_here
 ```bash
 python3 srtrbm_project_core.py
 ```
-
----
-
-## 🧪 What Makes This Different?
-
-This system is not just measuring performance.
-
-It introduces:
-
-* An LLM-based interpretation layer
-* A combination of physics, perception, and reasoning
-* A shift from:
-
-  error-based evaluation
-
-  → to dynamic system analysis
 
 ---
 
