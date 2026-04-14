@@ -12,6 +12,7 @@ authors:
 
 doi: 10.5281/zenodo.19211121
 url: "https://doi.org/10.5281/zenodo.19211121"
+source-code: "https://huggingface.co/cagasoluh/MYRA"
 repository-code: "https://github.com/cagasolu/srtrbm-llm-hybrid"
 
 abstract: >
