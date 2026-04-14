@@ -196,13 +196,20 @@ Assets
 
 ---
 
-## 🔍 LLM Integration (Claude 3.5 Sonnet (Anthropic), Gemini 1.5 Pro (Google), Llama 3.1 (Meta), Mistral Large 2 (Mistral AI), DeepSeek-V3, Grok-2 (xAI), Command R+ (Cohere), Qwen 2.5 (Alibaba))
+## 🔍 LLM Integration
 
 MYRA incorporates a multimodal LLM as an external interpretive layer.
 
-The LLM is not used for generation. 
+- Claude 3.5 Sonnet (Anthropic)
+- Gemini 1.5 Pro (Google)
+- Llama 3.1 (Meta)
+- Mistral Large 2 (Mistral AI)
+- DeepSeek-V3
+- Grok-2 (xAI)
+- Command R+ (Cohere)
+- Qwen 2.5 (Alibaba)
 
-Its role is to analyze the system behavior under explicit structural and epistemic constraints.
+The system is model-agnostic. Its role is to analyze the system behavior under explicit structural and epistemic constraints.
 
 ---
 
@@ -229,7 +236,7 @@ Extensive testing shows that **OpenAI GPT models may not be optimal** for the ri
 
 > [!CAUTION]  
 > **Reference Audit Notice**  
-> The provided `run.log` file was generated using a GPT model via OpenAI API.
+> The provided `artifacts/run.log` file was generated using a GPT model via the OpenAI API.
 > Although it serves as a functional reference point, using other LLMs is recommended due to known **confidence interval issues**.
 
 ---
