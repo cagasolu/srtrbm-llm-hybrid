@@ -200,14 +200,21 @@ Assets
 
 MYRA incorporates a multimodal LLM as an external interpretive layer.
 
-- Claude 3.5 Sonnet (Anthropic)
-- Gemini 1.5 Pro (Google)
-- Llama 3.1 (Meta)
-- Mistral Large 2 (Mistral AI)
-- DeepSeek-V3
-- Grok-2 (xAI)
-- Command R+ (Cohere)
-- Qwen 2.5 (Alibaba)
+### 🚀 Recommended Interpretive Engines
+
+For optimal epistemic consistency and high-confidence diagnostics, the following models are recommended as the external interpretive layer:
+
+* **Claude 3.5 Sonnet (Anthropic)** – Top-tier structural reasoning and code-logic auditing.
+* **Gemini 1.5 Pro (Google)** – Extended context handling for massive log-file analysis.
+* **Llama 3.1 (Meta)** – Leading open-source weight for local, privacy-focused execution.
+* **Mistral Large 2 (Mistral AI)** – High-efficiency European model with rigorous analytical focus.
+* **DeepSeek-V3** – Exceptional performance in mathematical and logic-heavy diagnostic tasks.
+* **Grok-2 (xAI)** – Real-time data synthesis and unfiltered architectural insights.
+* **Command R+ (Cohere)** – Specialized for RAG-driven analysis and enterprise-grade reliability.
+* **Qwen 2.5 (Alibaba)** – Superior performance in multi-step reasoning and technical auditing.
+
+> [!TIP]
+> While multiple providers are supported, **Claude 3.5 Sonnet** and **Llama 3.1** currently yield the most stable confidence intervals for MYRA’s internal behavior mapping.
 
 The system is model-agnostic. Its role is to analyze the system behavior under explicit structural and epistemic constraints.
 
@@ -236,8 +243,9 @@ Extensive testing shows that **OpenAI GPT models may not be optimal** for the ri
 
 > [!CAUTION]  
 > **Reference Audit Notice**  
-> The provided `artifacts/run.log` file was generated using a GPT model via the OpenAI API.
-> Although it serves as a functional reference point, using other LLMs is recommended due to known **confidence interval issues**.
+> The provided `artifacts/run.log` file was generated using a GPT model via the OpenAI API.  
+> Although it serves as a functional reference point, it should not be treated as ground truth due to known **confidence calibration limitations**.  
+> Using alternative LLMs is recommended for more robust evaluation.
 
 ---
 
