@@ -1,0 +1,20 @@
+{
+  "regime": "learning",
+  "phase": "ordered",
+  "failures": [],
+  "scores": {
+    "temperature": 0.46,
+    "gibbs": 0.43
+  },
+  "risk": {
+    "stagnation": 0.05,
+    "collapse": 0.0,
+    "over_ordering": 0.3
+  },
+  "actions": {},
+  "confidence": 0.2719435542821884,
+  "analysis": "High image_similarity (0.8597) and visually preserved digit structure indicate modes are retained and refinement matches the reference manifold. Learning_signal (0.328) and heating/positive trend slopes show continued parameter change, so the system is still learning. Entropy and diversity are low (entropy 0.3107 overall, current entropy 0.1565; diversity 0.2076), and mixing is slow (mcmc_tau_int 27.65), but per the strict rules these do not imply collapse when structural similarity is high. Beta is high (current beta 4.386) and outputs are structured → ordered phase. Overall classification: the system is in a learning regime with ordered phase. Epistemic note: confidence is limited by conflicting signals (very high similarity and active learning vs low diversity and poor mixing); therefore confidence is substantial but constrained by those contradictory indicators. [OVERRIDDEN: high structural similarity]",
+  "reason": "json|low_confidence_scaled",
+  "evidence": 0.2719435542821884,
+  "llm_conf_raw": 0.75
+}
