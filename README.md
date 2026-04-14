@@ -220,7 +220,7 @@ The system is model-agnostic. Its role is to analyze the system behavior under e
 
 ---
 
-# ⚠️ Model Compatibility & Performance Constraints
+## ⚠️ Model Compatibility & Performance Constraints
 
 While **MYRA** supports a wide range of LLMs, internal benchmarks indicate significant variance in **confidence scoring** and **epistemic reliability** across different architectures.
 
