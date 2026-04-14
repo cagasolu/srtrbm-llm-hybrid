@@ -2,6 +2,8 @@
 
 A hybrid intelligence system where thermodynamic energy-based generation (SR-TRBM) and LLM-assisted multimodal interpretation are unified under the MYRA architecture within a closed-loop framework.
 
+> **“What did the model actually learn?”**
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211121.svg)](https://doi.org/10.5281/zenodo.19211121)
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)
@@ -39,21 +41,7 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 ## 🚀 Overview
 
-This project implements MYRA (Model-Yielded Reasoning Architecture)—a hybrid intelligence system that integrates energy-based generation, structural self-refinement, and LLM-assisted interpretation within a closed-loop framework. At its core, MYRA incorporates a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative engine. This component learns structured representations by organizing data within an energy landscape, converging toward stable configurations through stochastic dynamics. MYRA is a post-processing module and the governing architecture of the system. It defines how generated states are evaluated, refined, and interpreted. Structural refinement in MYRA operates as a projection mechanism:
-
-- enforcing connectivity
-- preserving internal consistency
-- aligning samples with learned attractor structures
-
-This process does not introduce new information. It reveals and stabilizes what the model has already learned. To extend interpretability, MYRA incorporates an external multimodal LLM (OpenAI GPT) as an analytical layer.
-
-The LLM does not participate in generation. 
-
-Instead, it provides system-level interpretation by:
-
-- evaluating convergence dynamics
-- assessing structural coherence
-- analyzing emergent patterns
+This project implements MYRA (Model-Yielded Reasoning Architecture)—a hybrid intelligence system that integrates energy-based generation, structural self-refinement, and LLM-assisted interpretation within a closed-loop framework. At its core, MYRA incorporates a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative engine. This component learns structured representations by organizing data within an energy landscape, converging toward stable configurations through stochastic dynamics. MYRA is a post-processing module and the governing architecture of the system. It defines how generated states are evaluated, refined, and interpreted.
 
 The system operates as a continuous feedback loop:
 
@@ -76,19 +64,15 @@ The associated arXiv publication can be regarded as the theoretical precursor to
 
 ---
 
-## 🧠 Core Idea
+## 🧠 Core Philosophy
 
-MYRA analyzes generative behavior as a function of energy-constrained structural dynamics:
+> **“What did the model actually learn?”**
 
-- Attractor formation and stability  
-- Convergence behavior under stochastic transitions  
-- Structured diversity across samples  
-- Energy landscape organization  
+This project is built to answer that question.
 
-This enables a clear distinction between:
+Unlike modern LLMs that focus on completing human tasks, MYRA focuses on **understanding learned structure**—not just output.
 
-- ❌ Mode collapse (degenerate convergence)  
-- ✅ Attractor-driven refinement (structured convergence)  
+It aims at the root of artificial intelligence: revealing what a model has actually learned, not what it can convincingly generate.
 
 ---
 
@@ -127,12 +111,12 @@ Main Core
 │   of the Boltzmann machine.
 
 LLM Integration
-├── openaiF/
+├── llmeS/
 │   ├── __init__.py
 │   │   Unified interface for LLM-based evaluation and control.
 │   │
 │   ├── client.py
-│   │   Fault-tolerant OpenAI client with retry and fallback handling.
+│   │   Fault-tolerant LLM client with retry and fallback handling.
 │   │
 │   ├── gateway.py
 │   │   Multimodal interpretation engine combining metrics and LPIPS-based similarity.
@@ -178,7 +162,7 @@ Correction Modules
 │       Implements energy-based and spatial refinement methods to stabilize and
 │       denoise generated samples.
 
-GPT Configuration
+LLM Configuration
 ├── yaml/
 │   ├── perception.yaml
 │   │   Specifies structural reasoning rules for interpreting model outputs and
@@ -200,7 +184,7 @@ Assets
 ├── analysis
 ├── correction
 ├── graphs
-├── openaiF
+├── llmeS
 ├── supplement
 ├── yaml
 ├── srtrbm_project_core.py
@@ -212,13 +196,41 @@ Assets
 
 ---
 
-## 🔍 LLM Integration (OpenAI)
+## 🔍 LLM Integration (Claude 3.5 Sonnet (Anthropic), Gemini 1.5 Pro (Google), Llama 3.1 (Meta), Mistral Large 2 (Mistral AI), DeepSeek-V3, Grok-2 (xAI), Command R+ (Cohere), Qwen 2.5 (Alibaba))
 
-MYRA incorporates an OpenAI multimodal LLM as an external interpretive layer.
+MYRA incorporates a multimodal LLM as an external interpretive layer.
 
 The LLM is not used for generation. 
 
 Its role is to analyze the system behavior under explicit structural and epistemic constraints.
+
+---
+
+# ⚠️ Model Compatibility & Performance Constraints
+
+While **MYRA** supports a wide range of LLMs, internal benchmarks indicate significant variance in **confidence scoring** and **epistemic reliability** across different architectures.
+
+---
+
+## 📉 Critical Observations on GPT-Series Models
+
+Extensive testing shows that **OpenAI GPT models may not be optimal** for the rigorous structural auditing required by MYRA:
+
+- **Confidence Instability**  
+  GPT models often exhibit overconfidence on diagnostic tasks, failing to maintain stable probability calibration when analyzing complex structural anomalies.
+
+- **Heuristic Bias**  
+  These models tend to default to generic, "safe" explanations rather than identifying **precise mathematical deviations** within RBM layers.
+
+- **Deterministic Limitations**  
+  Limited access to internal logit distributions in proprietary APIs restricts the depth of interpretability and fine-grained behavioral analysis.
+
+---
+
+> [!CAUTION]  
+> **Reference Audit Notice**  
+> The provided `run.log` file was generated using a GPT model via OpenAI API.
+> Although it serves as a functional reference point, using other LLMs is recommended due to known **confidence interval issues**.
 
 ---
 
@@ -260,17 +272,6 @@ This prevents overconfident interpretations and enforces alignment between:
 - observed metrics
 - visual structure
 - inferred system state
-
----
-
-### 🔑 API Key Requirement
-
-To run LLM-based analysis, provide your OpenAI API key:
-
-```bash
-
-export OPENAI_API_KEY=your_key_here
-```
 
 ---
 
@@ -362,7 +363,7 @@ The following are intentionally withheld:
 - Dataset construction and curation pipeline
 - CNN-based supporting architectures used within the model
 - Embedding mechanisms and DGTS-based internal data structures
-- Exact prompt engineering and internal processing details of OpenAI GPT usage
+- Exact prompt engineering and internal processing details of LLM usage
 - Prompt-to-response transformation strategies and orchestration logic
 
 ---
@@ -400,14 +401,6 @@ This project adopts a controlled transparency approach:
 
 ```bash
 pip install -r requirements.txt
-```
-
----
-
-## 🔑 Setup
-
-```bash
-export OPENAI_API_KEY=your_key_here
 ```
 
 ---
