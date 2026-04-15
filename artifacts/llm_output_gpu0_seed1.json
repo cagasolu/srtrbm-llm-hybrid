@@ -1,0 +1,18 @@
+{
+  "analysis": "Image similarity is high (0.855) indicating preserved structural fidelity between X and Y — a strong positive signal that rules out mode collapse under the system's strict constraint. Diversity (0.207) and entropy (current 0.156) are low, and mixing (mcmc_tau_int = 22.52) is slow, but low diversity alone is not a failure and poor mixing does not imply collapse per the rules. The system reports learning_active=true, a positive learning_signal (0.328), rising beta and temperature trends, and heating rather than cooling; these indicate ongoing parameter updates. Beta is relatively large (current beta≈4.39) and outputs are structured (low entropy + high similarity), supporting an \"ordered\" phase. Collapse criteria are not met because structural similarity is high and reconstruction quality is good. The main remaining concern is over-ordering (loss of stylistic micro-diversity) given low diversity and low entropy. Confidence is set below the strongest single metric (image_similarity) to reflect limited longitudinal evidence and absence of longer-run dynamics: high internal belief is constrained by available snapshot metrics. [OVERRIDDEN: high structural similarity]",
+  "regime": "learning",
+  "phase": "ordered",
+  "scores": {
+    "temperature": 0.46172213554382324,
+    "gibbs": 0.4070188036147369
+  },
+  "risk": {
+    "stagnation": 0.05,
+    "collapse": 0.0,
+    "over_ordering": 0.45
+  },
+  "confidence": 0.2710333585739136,
+  "evidence": 0.2710333585739136,
+  "llm_conf_raw": 0.75,
+  "reason": "low_confidence_scaled"
+}
