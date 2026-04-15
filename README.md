@@ -41,16 +41,20 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 ## 🚀 Overview
 
-This project implements MYRA (Model-Yielded Reasoning Architecture)—a hybrid intelligence system that integrates energy-based generation, structural self-refinement, and LLM-assisted interpretation within a closed-loop framework. At its core, MYRA incorporates a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative engine. This component learns structured representations by organizing data within an energy landscape, converging toward stable configurations through stochastic dynamics. MYRA is a post-processing module and the governing architecture of the system. It defines how generated states are evaluated, refined, and interpreted.
+MYRA (Model-Yielded Reasoning Architecture) is a hybrid system that combines energy-based generation with structural analysis and LLM-assisted interpretation.
 
-The system operates as a continuous feedback loop:
+At its core, MYRA uses a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative component. This model learns data by organizing it within an energy landscape and sampling stable configurations through stochastic dynamics.
 
-- MYRA generates (via SR-TRBM)
-- Energy constraints guide the state space.
-- MYRA refines structural consistency.
-- The LLM interprets system behavior.
+MYRA is not only a generative system. It is designed to analyze what the model has learned. Generated states are evaluated, refined, and interpreted within a unified pipeline.
 
-This results in a unified intelligence framework where generation, refinement, and interpretation are not separate stages but tightly coupled processes. The project is a semi-open, complex AI system designed to learn from real-world data through the interaction of thermodynamic modeling, structural reasoning, and external interpretive intelligence.
+### System Loop
+
+- SR-TRBM generates samples from the learned energy landscape  
+- Structural modules refine and stabilize these samples  
+- Metrics measure entropy, diversity, and similarity  
+- The LLM interprets the results and provides higher-level analysis  
+
+These components form a single system focused on understanding model behavior.
 
 ---
 
@@ -58,21 +62,23 @@ This results in a unified intelligence framework where generation, refinement, a
 
 The SR-TRBM model used in this project originates from prior work:
 
-👉 https://github.com/cagasolu/sr-trbm
+👉 https://github.com/cagasolu/sr-trbm  
 
-The associated arXiv publication can be regarded as the theoretical precursor to this system.
+The associated arXiv publication serves as the theoretical foundation.
 
 ---
 
-## 🧠 Core Philosophy
+## 🧠 Core Idea
 
-> **“What did the model actually learn?”**
+> **What did the model actually learn?**
 
-This project is built to answer that question.
+The model does not fail to learn. It learns the structure of the data within its own representation. However, this structure is not directly visible in the generated outputs.
 
-Unlike modern LLMs that focus on completing human tasks, MYRA focuses on **understanding learned structure**—not just output.
+During generation, the model recombines learned patterns within its energy landscape. This can produce outputs that are coherent but do not exist in the original dataset.
 
-It aims at the root of artificial intelligence: revealing what a model has actually learned, not what it can convincingly generate.
+This creates a gap between what the model has learned and what we observe.
+
+MYRA is designed to analyze this gap. It focuses not only on generated outputs but on revealing the structure that the model has internalized, using energy-based modeling, structural analysis, and LLM-assisted interpretation.
 
 ---
 
@@ -111,7 +117,7 @@ Main Core
 │   of the Boltzmann machine.
 
 LLM Integration
-├── llmeS/
+├── openaiF/
 │   ├── __init__.py
 │   │   Unified interface for LLM-based evaluation and control.
 │   │
@@ -184,7 +190,7 @@ Assets
 ├── analysis
 ├── correction
 ├── graphs
-├── llmeS
+├── openaiF
 ├── supplement
 ├── yaml
 ├── srtrbm_project_core.py
@@ -198,87 +204,54 @@ Assets
 
 ## 🔍 LLM Integration
 
-MYRA incorporates a multimodal LLM as an external interpretive layer.
+MYRA uses an LLM as an external interpretive layer.
 
-### 🚀 Recommended Interpretive Engines
-
-For optimal epistemic consistency and high-confidence diagnostics, the following models are recommended as the external interpretive layer:
-
-* **Claude 3.5 Sonnet (Anthropic)** – Top-tier structural reasoning and code-logic auditing.
-* **Gemini 1.5 Pro (Google)** – Extended context handling for massive log-file analysis.
-* **Llama 3.1 (Meta)** – Leading open-source weight for local, privacy-focused execution.
-* **Mistral Large 2 (Mistral AI)** – High-efficiency European model with rigorous analytical focus.
-* **DeepSeek-V3** – Exceptional performance in mathematical and logic-heavy diagnostic tasks.
-* **Grok-2 (xAI)** – Real-time data synthesis and unfiltered architectural insights.
-* **Command R+ (Cohere)** – Specialized for RAG-driven analysis and enterprise-grade reliability.
-* **Qwen 2.5 (Alibaba)** – Superior performance in multi-step reasoning and technical auditing.
-
-> [!TIP]
-> While multiple providers are supported, **Claude 3.5 Sonnet** and **Llama 3.1** currently yield the most stable confidence intervals for MYRA’s internal behavior mapping.
-
-The system is model-agnostic. Its role is to analyze the system behavior under explicit structural and epistemic constraints.
+The LLM is not used for generation. Instead, it analyzes model behavior by looking at outputs, metrics, and structural patterns.
 
 ---
 
-## ⚠️ Model Compatibility & Performance Constraints
+## ⚙️ Implementation
 
-While **MYRA** supports a wide range of LLMs, internal benchmarks indicate significant variance in **confidence scoring** and **epistemic reliability** across different architectures.
+The current setup uses the OpenAI API (`openaiF` module), mainly because it is easy to run and requires minimal setup. That said, the system is not tied to OpenAI.
 
----
+The interface—especially `client.py`—is kept simple on purpose so it can be adapted to other providers with minimal effort. This includes:
 
-## 📉 Critical Observations on GPT-Series Models
+- Anthropic (Claude)
+- Google (Gemini)
+- Meta (Llama / local setups)
+- Mistral
+- DeepSeek
+- Qwen
+- or other LLMs
 
-Extensive testing shows that **OpenAI GPT models may not be optimal** for the rigorous structural auditing required by MYRA:
+You can rename or replace the `openaiF` module to use a different LLM backend.
 
-- **Confidence Instability**  
-  GPT models often exhibit overconfidence on diagnostic tasks, failing to maintain stable probability calibration when analyzing complex structural anomalies.
+In most cases, adapting the system only requires updating the module import and the `SafeOpenAIClient()` reference in `srtrbm_project_core.py`. Depending on the backend, minor adjustments may also be needed in the module’s `__init__.py` to align the interface.
 
-- **Heuristic Bias**  
-  These models tend to default to generic, "safe" explanations rather than identifying **precise mathematical deviations** within RBM layers.
+This keeps the integration simple and makes it easy to switch between different LLM providers.
 
-- **Deterministic Limitations**  
-  Limited access to internal logit distributions in proprietary APIs restricts the depth of interpretability and fine-grained behavioral analysis.
-
----
-
-> [!CAUTION]  
-> **Reference Audit Notice**  
-> The provided `artifacts/run.log` file was generated using a GPT model via the OpenAI API.  
-> Although it serves as a functional reference point, it should not be treated as ground truth due to known **confidence calibration limitations**.  
-> Using alternative LLMs is recommended for more robust evaluation.
+In practice, the interpretive layer can be swapped depending on your needs (e.g., performance, privacy, or local execution).
 
 ---
 
-### 🧠 Role of the LLM
+## 🧪 Practical Notes
 
-Within MYRA, the LLM functions as a constraint-aware evaluator, combining:
+- OpenAI is used here mainly for convenience.
+- Other models can be plugged in with small changes.
+- Different models will not behave the same—some are more precise, some more generic.
 
-- quantitative metrics (energy, diversity, similarity)
-- structural signals (refined outputs)
-- multimodal inputs (image + statistics)
+---
 
-It performs system-level interpretation by:
+> [!NOTE]
 
-- evaluating convergence dynamics
-- distinguishing collapse vs. structured convergence
-- assessing structural consistency across samples
-- reasoning over attractor behavior and energy organization
-
-Importantly, interpretation is not free-form.
-
-It is guided by strict principles defined in the system:
-
-- structural similarity overrides weak diversity signals
-- refinement reveals true structural model
-- collapse requires simultaneous structural degradation
-
-These constraints ensure that the LLM behaves as a bounded reasoning component, not a generative oracle.
+> The LLM is only used for interpretation.  
+> It should not be treated as ground truth, but as an additional layer of analysis.
 
 ---
 
 ### 🔁 Epistemic Constraint
 
-The LLM’s confidence is explicitly limited by available evidence:
+The LLM’s confidence is constrained by available evidence:
 
 > confidence ≤ evidence
 
@@ -305,7 +278,7 @@ The LLM processes both:
 #### Images
 
 * refined samples
-* stabilized ("perfect") outputs
+* stabilized outputs
 
 ---
 
@@ -325,7 +298,7 @@ The LLM processes both:
 
 ## 🧬 Key Insight
 
-High repetition is not always a problem. In many cases, it actually means the system has learned a strong internal structure.
+High repetition is not necessarily a failure. In some cases, it may indicate the formation of stable internal structures.
 
 ```
 multiple stochastic variations → converge → stable prototypes
@@ -355,7 +328,7 @@ The following components are fully accessible:
 
 ---
 
-### ⚠️ Partially Exposed
+### ⚠️ Partially Documented
 
 These components are visible at a high level but not fully disclosed:
 
@@ -367,9 +340,9 @@ These components are visible at a high level but not fully disclosed:
 
 ---
 
-### ❌ Not Included
+### 🔒 Not Included
 
-The following are intentionally withheld:
+The following components are not included in this release:
 
 - Full training pipeline and data flow
 - Optimization strategies and hyperparameter search
@@ -446,7 +419,7 @@ It is a system that:
 * generates
 * refines
 * interprets
-* and starts to **understand its own behavior**
+* and reveals aspects of its own behavior
 
 ---
 
