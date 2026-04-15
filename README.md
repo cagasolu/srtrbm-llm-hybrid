@@ -17,15 +17,17 @@ A hybrid intelligence system where thermodynamic energy-based generation (SR-TRB
 
 ---
 
-## 📦 Artifacts
+## 📦 Additional Files and Models
 
-The following artifacts are included to support training, evaluation, and reproducibility of the experimental pipeline:
+Example outputs are in the `artifacts/` directory (PCD-1, seed=1, adaptive temperature), together with a corresponding `run.log`.
+
+The following files support reproducibility and evaluation:
 
 - **`stan.7z`**  
-  Compressed dataset archive. After extraction, it provides `stan.dgts`, which is used as the primary numerical dataset.
+  Compressed dataset archive. After extraction, it yields `stan.dgts`, used as the primary numerical dataset.
 
 - **`zeta_mnist_hybrid.pt`**  
-  Pretrained model checkpoint used for inference, sampling, and energy-based analysis.
+  Pretrained model checkpoint for inference, sampling, and energy-based analysis.
 
 ### 🔧 Usage
 
@@ -43,9 +45,7 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 MYRA (Model-Yielded Reasoning Architecture) is a hybrid system that combines energy-based generation with structural analysis and LLM-assisted interpretation.
 
-At its core, MYRA uses a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative component. This model learns data by organizing it within an energy landscape and sampling stable configurations through stochastic dynamics.
-
-MYRA is not only a generative system. It is designed to analyze what the model has learned. Generated states are evaluated, refined, and interpreted within a unified pipeline.
+At its core, MYRA uses a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative component. This model learns data by organizing it within an energy landscape and sampling stable configurations through stochastic dynamics. MYRA is not only a generative system. It is designed to analyze what the model has learned. Generated states are evaluated, refined, and interpreted within a unified pipeline.
 
 ### System Loop
 
@@ -72,13 +72,9 @@ The associated arXiv publication serves as the theoretical foundation.
 
 > **What did the model actually learn?**
 
-The model does not fail to learn. It learns the structure of the data within its own representation. However, this structure is not directly visible in the generated outputs.
+The model does not fail to learn. It learns the structure of the data within its own representation. However, this structure is not directly visible in the generated outputs. During generation, the model recombines learned patterns within its energy landscape. This can produce outputs that are coherent but do not exist in the original dataset.
 
-During generation, the model recombines learned patterns within its energy landscape. This can produce outputs that are coherent but do not exist in the original dataset.
-
-This creates a gap between what the model has learned and what we observe.
-
-MYRA is designed to analyze this gap. It focuses not only on generated outputs but on revealing the structure that the model has internalized, using energy-based modeling, structural analysis, and LLM-assisted interpretation.
+This creates a gap between what the model has learned and what we observe. MYRA is designed to analyze this gap. It focuses not only on generated outputs but on revealing the structure that the model has internalized, using energy-based modeling, structural analysis, and LLM-assisted interpretation.
 
 ---
 
