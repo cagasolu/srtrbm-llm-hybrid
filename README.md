@@ -43,7 +43,7 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 ## 🚀 Overview
 
-MYRA (MYRA: Model for sYstem Reasoning and Analysis) is a hybrid system that combines energy-based generation with structural analysis and LLM-assisted interpretation.
+MYRA (Model for sYstem Reasoning and Analysis) is a hybrid system that combines energy-based generation with structural analysis and LLM-assisted interpretation.
 
 At its core, MYRA uses a thermodynamically regulated Boltzmann machine (SR-TRBM) as its generative component. This model learns data by organizing it within an energy landscape and sampling stable configurations through stochastic dynamics. MYRA is not only a generative system. It is designed to analyze what the model has learned. Generated states are evaluated, refined, and interpreted within a unified pipeline.
 
