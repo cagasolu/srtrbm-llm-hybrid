@@ -97,10 +97,7 @@ Band Consistency         : True
 
 ### ✅ Seed Experiment Result
 
-**SEED EXPERIMENT: SUCCESS**
-
-This run successfully satisfies the band consistency criterion.  
-Notably, the valid solution emerges precisely at **lag step = 8**, indicating a well-aligned entropy balance within the defined band.
+**SEED EXPERIMENT: SUCCESS** →  This run successfully satisfies the band consistency criterion. Notably, the valid solution emerges precisely at **lag step = 8**, indicating a well-aligned entropy balance within the defined band.
 
 > The outcome is relatively favorable given the stochastic nature of the process.
 
