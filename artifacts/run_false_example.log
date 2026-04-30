@@ -1,0 +1,67 @@
+Example Run Module for Comparison:
+.
+.
+
+Lag[9]_step ↓
+
+LagSteps=5  | Mix=0.502492 | PixelH=0.3977 | SpatialH=0.4039 | BandConsistent=False
+LagSteps=6  | Mix=0.460818 | PixelH=0.3963 | SpatialH=0.4053 | BandConsistent=False
+LagSteps=7  | Mix=0.433287 | PixelH=0.4010 | SpatialH=0.4053 | BandConsistent=False
+LagSteps=8  | Mix=0.414113 | PixelH=0.3945 | SpatialH=0.4042 | BandConsistent=False
+LagSteps=9  | Mix=0.403109 | PixelH=0.3963 | SpatialH=0.4038 | BandConsistent=True
+LagSteps=10 | Mix=0.384424 | PixelH=0.4002 | SpatialH=0.4045 | BandConsistent=False
+LagSteps=11 | Mix=0.373944 | PixelH=0.3989 | SpatialH=0.4055 | BandConsistent=False
+LagSteps=12 | Mix=0.368139 | PixelH=0.4011 | SpatialH=0.4057 | BandConsistent=False
+LagSteps=13 | Mix=0.360205 | PixelH=0.3960 | SpatialH=0.4033 | BandConsistent=False
+LagSteps=14 | Mix=0.351808 | PixelH=0.3976 | SpatialH=0.4056 | BandConsistent=False
+LagSteps=15 | Mix=0.346421 | PixelH=0.3990 | SpatialH=0.4049 | BandConsistent=False
+
+
+Hybrid Thermodynamic RBM Final Results
+Seed: 2 | GPU: 0
+Final Temperature        : 0.923450
+Weight Norm              : 68.431061
+Spectral Gain            : 74.103666
+Train Log-Likelihood     : -399.222626
+Test Log-Likelihood      : -398.560791
+Train Pseudo-Likelihood  : -0.689058
+Test Pseudo-Likelihood   : -0.689025
+Reconstruction MSE       : 0.015970
+Reconstruction Accuracy  : 0.979110
+Mean Data Energy         : -657.395325
+Mean Model Energy        : -632.946289
+Energy Gap               : 24.449036
+GPU Energy Used          : 39042.34 J
+Log Partition (AIS)      : 1056.617920
+AIS ESS                  : 3032.31
+AIS Log-Weight Variance  : 1.082392
+MCMC tau_int             : 3.29
+MCMC tau_std             : 0.16
+MCMC tau_max             : 4.36
+MCMC tau_min             : 2.96
+MCMC tau_rms             : 3.30
+MCMC tau_geo             : 3.29
+MCMC tau_harm            : 3.29
+MCMC ESS                 : 60857476.00
+MCMC ESS / chain         : 30428.74
+MCMC R-hat               : 1.0019
+MCMC ACF Length          : 9
+MCMC Mix Index           : 0.393369
+
+Note: Entropy bounds reordered—metric definitions are well-formed.
+
+Entropy Band             : Closed interval [0.397645, 0.406021]
+Choice(Mix | Band)       : C(0.393369 | [0.397645, 0.406021]) = 0.393369
+Band Consistency         : False
+
+>>> SEED EXPERIMENT: FAILED | Band=False | Lag[9]=True | TrueCount=1 | TrueLags=[9]
+
+Hamming                  : 0.182057
+Effective Rank           : 118.423225
+Mean Distribution L2     : 0.120789
+Professional Samples File: samples_prof_gpu0_seed2.png
+Generated Samples File   : samples_gpu0_seed2.png
+
+.
+.
+.

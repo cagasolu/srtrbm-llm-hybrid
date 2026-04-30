@@ -1,0 +1,681 @@
+(srtrbm_env) ...:~/srtrbm_project$ python3 srtrbm_project_core.py
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /home/gosachunt_uv0/srtrbm_env/lib/python3.10/site-packages/lpips/weights/v0.1/vgg.pth
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /home/gosachunt_uv0/srtrbm_env/lib/python3.10/site-packages/lpips/weights/v0.1/vgg.pth
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /home/gosachunt_uv0/srtrbm_env/lib/python3.10/site-packages/lpips/weights/v0.1/vgg.pth
+Training: 100%|██████████████████████████████████████████████████████████████████████████| 400/400 [04:28<00:00,  1.49it/s, T=0.923, flip=0.055, beta=4.420]
+
+[GPU 0] Running AIS...
+✔ AIS finished in 94.65 seconds
+coefficient (kappa): 784
+coefficient (kappa): 784
+
+[LLM] Start | B=1200 | T=0.9235
+[Debug] ESS=1.00 | k=1198 | deltaE_band=[0.00,2.00] | in_band=130 | selected=130
+[Debug] d_model=1.9488, d_llm=1.0000
+[Step] Sample=0 | REJECT | d_model=1.949 | d_total=2.649 | p=0.071
+[Debug] d_model=1.5162, d_llm=0.4767
+[Step] Sample=2 | REJECT | d_model=1.516 | d_total=1.850 | p=0.157
+[Debug] d_model=1.0819, d_llm=0.5643
+[Step] Sample=3 | ACCEPT | d_model=1.082 | d_total=1.477 | p=0.228
+[Debug] d_model=1.7267, d_llm=-0.4997
+[Step] Sample=10 | ACCEPT | d_model=1.727 | d_total=1.377 | p=0.252
+[Debug] d_model=1.4783, d_llm=0.7780
+[Step] Sample=13 | REJECT | d_model=1.478 | d_total=2.023 | p=0.132
+[Debug] d_model=0.7255, d_llm=0.3868
+[Step] Sample=22 | ACCEPT | d_model=0.725 | d_total=0.996 | p=0.369
+[Debug] d_model=1.2336, d_llm=0.6634
+[Step] Sample=36 | REJECT | d_model=1.234 | d_total=1.698 | p=0.183
+[Debug] d_model=1.6730, d_llm=-0.2153
+[Step] Sample=56 | REJECT | d_model=1.673 | d_total=1.522 | p=0.218
+[Debug] d_model=1.5349, d_llm=-0.7677
+[Step] Sample=58 | REJECT | d_model=1.535 | d_total=0.997 | p=0.369
+[Debug] d_model=1.7834, d_llm=-0.9673
+[Step] Sample=73 | REJECT | d_model=1.783 | d_total=1.106 | p=0.331
+[Debug] d_model=0.6910, d_llm=0.1755
+[Step] Sample=80 | ACCEPT | d_model=0.691 | d_total=0.814 | p=0.443
+[Debug] d_model=1.7054, d_llm=-0.1550
+[Step] Sample=81 | REJECT | d_model=1.705 | d_total=1.597 | p=0.203
+[Debug] d_model=1.9172, d_llm=1.0013
+[Step] Sample=86 | REJECT | d_model=1.917 | d_total=2.618 | p=0.073
+[Debug] d_model=0.8289, d_llm=-0.4611
+[Step] Sample=91 | ACCEPT | d_model=0.829 | d_total=0.506 | p=0.603
+[Debug] d_model=1.3864, d_llm=0.7759
+[Step] Sample=94 | REJECT | d_model=1.386 | d_total=1.930 | p=0.145
+[Debug] d_model=1.8087, d_llm=-1.0119
+[Step] Sample=96 | REJECT | d_model=1.809 | d_total=1.100 | p=0.333
+[Debug] d_model=0.3591, d_llm=-0.2038
+[Step] Sample=102 | ACCEPT | d_model=0.359 | d_total=0.216 | p=0.805
+[Debug] d_model=0.1432, d_llm=0.0825
+[Step] Sample=104 | REJECT | d_model=0.143 | d_total=0.201 | p=0.818
+[Debug] d_model=0.7010, d_llm=-0.3929
+[Step] Sample=124 | ACCEPT | d_model=0.701 | d_total=0.426 | p=0.653
+[Debug] d_model=0.8269, d_llm=0.4883
+[Step] Sample=127 | REJECT | d_model=0.827 | d_total=1.169 | p=0.311
+[Debug] d_model=0.8766, d_llm=-0.5235
+[Step] Sample=129 | REJECT | d_model=0.877 | d_total=0.510 | p=0.600
+[Debug] d_model=1.4121, d_llm=0.5833
+[Step] Sample=139 | REJECT | d_model=1.412 | d_total=1.820 | p=0.162
+[Debug] d_model=1.5016, d_llm=0.9032
+[Step] Sample=145 | REJECT | d_model=1.502 | d_total=2.134 | p=0.118
+[Debug] d_model=0.2852, d_llm=0.1741
+[Step] Sample=147 | REJECT | d_model=0.285 | d_total=0.407 | p=0.666
+[Debug] d_model=0.6625, d_llm=-0.4096
+[Step] Sample=155 | ACCEPT | d_model=0.663 | d_total=0.376 | p=0.687
+[Debug] d_model=0.2653, d_llm=0.1664
+[Step] Sample=159 | REJECT | d_model=0.265 | d_total=0.382 | p=0.683
+[Debug] d_model=1.7015, d_llm=1.0654
+[Step] Sample=170 | REJECT | d_model=1.702 | d_total=2.447 | p=0.087
+[Debug] d_model=1.9482, d_llm=1.2110
+[Step] Sample=172 | REJECT | d_model=1.948 | d_total=2.796 | p=0.061
+[Debug] d_model=1.2248, d_llm=0.7662
+[Step] Sample=176 | REJECT | d_model=1.225 | d_total=1.761 | p=0.172
+[Debug] d_model=0.3032, d_llm=0.1924
+[Step] Sample=186 | REJECT | d_model=0.303 | d_total=0.438 | p=0.645
+[Debug] d_model=0.0072, d_llm=-0.0046
+[Step] Sample=195 | ACCEPT | d_model=0.007 | d_total=0.004 | p=0.996
+[Debug] d_model=0.1603, d_llm=0.1049
+[Step] Sample=196 | ACCEPT | d_model=0.160 | d_total=0.234 | p=0.792
+[Debug] d_model=0.6431, d_llm=-0.4261
+[Step] Sample=215 | ACCEPT | d_model=0.643 | d_total=0.345 | p=0.708
+[Debug] d_model=0.7274, d_llm=-0.4876
+[Step] Sample=226 | ACCEPT | d_model=0.727 | d_total=0.386 | p=0.680
+[Debug] d_model=1.6559, d_llm=0.9876
+[Step] Sample=228 | REJECT | d_model=1.656 | d_total=2.347 | p=0.096
+[Debug] d_model=1.7344, d_llm=1.1527
+[Step] Sample=233 | REJECT | d_model=1.734 | d_total=2.541 | p=0.079
+[Debug] d_model=1.5213, d_llm=-1.0107
+[Step] Sample=240 | ACCEPT | d_model=1.521 | d_total=0.814 | p=0.443
+[Debug] d_model=1.3643, d_llm=0.1333
+[Step] Sample=247 | REJECT | d_model=1.364 | d_total=1.458 | p=0.233
+[Debug] d_model=0.6076, d_llm=-0.4099
+[Step] Sample=253 | REJECT | d_model=0.608 | d_total=0.321 | p=0.726
+[Debug] d_model=0.0089, d_llm=0.0061
+[Step] Sample=254 | ACCEPT | d_model=0.009 | d_total=0.013 | p=0.987
+[Debug] d_model=0.5172, d_llm=0.3590
+[Step] Sample=286 | ACCEPT | d_model=0.517 | d_total=0.769 | p=0.464
+[Debug] d_model=0.4589, d_llm=0.3229
+[Step] Sample=292 | ACCEPT | d_model=0.459 | d_total=0.685 | p=0.504
+[Debug] d_model=0.4931, d_llm=-0.2199
+[Step] Sample=306 | ACCEPT | d_model=0.493 | d_total=0.339 | p=0.712
+[Debug] d_model=0.8602, d_llm=-0.4077
+[Step] Sample=321 | ACCEPT | d_model=0.860 | d_total=0.575 | p=0.563
+[Debug] d_model=0.6544, d_llm=-0.4767
+[Step] Sample=331 | ACCEPT | d_model=0.654 | d_total=0.321 | p=0.726
+[Debug] d_model=0.9729, d_llm=0.7141
+[Step] Sample=346 | ACCEPT | d_model=0.973 | d_total=1.473 | p=0.229
+[Debug] d_model=0.9713, d_llm=-0.7183
+[Step] Sample=364 | ACCEPT | d_model=0.971 | d_total=0.469 | p=0.626
+[Debug] d_model=1.8589, d_llm=-0.5439
+[Step] Sample=385 | REJECT | d_model=1.859 | d_total=1.478 | p=0.228
+[Debug] d_model=1.1703, d_llm=0.6751
+[Step] Sample=387 | REJECT | d_model=1.170 | d_total=1.643 | p=0.193
+[Debug] d_model=1.9224, d_llm=0.4607
+[Step] Sample=390 | REJECT | d_model=1.922 | d_total=2.245 | p=0.106
+[Debug] d_model=1.9488, d_llm=-0.7787
+[Step] Sample=422 | REJECT | d_model=1.949 | d_total=1.404 | p=0.246
+[Debug] d_model=0.9786, d_llm=0.7020
+[Step] Sample=440 | REJECT | d_model=0.979 | d_total=1.470 | p=0.230
+[Debug] d_model=0.7170, d_llm=-0.5157
+[Step] Sample=465 | ACCEPT | d_model=0.717 | d_total=0.356 | p=0.700
+[Debug] d_model=1.6297, d_llm=-1.1752
+[Step] Sample=474 | ACCEPT | d_model=1.630 | d_total=0.807 | p=0.446
+[Debug] d_model=1.9830, d_llm=-1.4081
+[Step] Sample=481 | REJECT | d_model=1.983 | d_total=0.997 | p=0.369
+[Debug] d_model=1.8066, d_llm=0.5519
+[Step] Sample=485 | REJECT | d_model=1.807 | d_total=2.193 | p=0.112
+[Debug] d_model=1.3967, d_llm=-0.0444
+[Step] Sample=502 | REJECT | d_model=1.397 | d_total=1.366 | p=0.255
+[Debug] d_model=0.2819, d_llm=-0.2013
+[Step] Sample=504 | ACCEPT | d_model=0.282 | d_total=0.141 | p=0.868
+[Debug] d_model=1.3337, d_llm=-0.9537
+[Step] Sample=505 | ACCEPT | d_model=1.334 | d_total=0.666 | p=0.514
+[Debug] d_model=1.4554, d_llm=1.0394
+[Step] Sample=521 | ACCEPT | d_model=1.455 | d_total=2.183 | p=0.113
+[Debug] d_model=0.4328, d_llm=0.3134
+[Step] Sample=533 | REJECT | d_model=0.433 | d_total=0.652 | p=0.521
+[Debug] d_model=0.9286, d_llm=0.6780
+[Step] Sample=535 | REJECT | d_model=0.929 | d_total=1.403 | p=0.246
+[Debug] d_model=1.9310, d_llm=0.7631
+[Step] Sample=541 | REJECT | d_model=1.931 | d_total=2.465 | p=0.085
+[Debug] d_model=0.4918, d_llm=-0.3586
+[Step] Sample=544 | ACCEPT | d_model=0.492 | d_total=0.241 | p=0.786
+[Debug] d_model=1.5386, d_llm=-0.0403
+[Step] Sample=553 | REJECT | d_model=1.539 | d_total=1.510 | p=0.221
+[Debug] d_model=0.3386, d_llm=0.2494
+[Step] Sample=570 | REJECT | d_model=0.339 | d_total=0.513 | p=0.599
+[Debug] d_model=1.9929, d_llm=1.4435
+[Step] Sample=572 | REJECT | d_model=1.993 | d_total=3.003 | p=0.050
+[Debug] d_model=1.7681, d_llm=-1.2685
+[Step] Sample=577 | ACCEPT | d_model=1.768 | d_total=0.880 | p=0.415
+[Debug] d_model=1.3661, d_llm=0.4399
+[Step] Sample=598 | REJECT | d_model=1.366 | d_total=1.674 | p=0.187
+[Debug] d_model=0.8235, d_llm=-0.5970
+[Step] Sample=604 | REJECT | d_model=0.823 | d_total=0.406 | p=0.667
+[Debug] d_model=1.4168, d_llm=-0.8214
+[Step] Sample=608 | REJECT | d_model=1.417 | d_total=0.842 | p=0.431
+[Debug] d_model=1.5776, d_llm=1.1376
+[Step] Sample=620 | REJECT | d_model=1.578 | d_total=2.374 | p=0.093
+[Debug] d_model=0.5758, d_llm=-0.2075
+[Step] Sample=630 | REJECT | d_model=0.576 | d_total=0.431 | p=0.650
+[Debug] d_model=0.3389, d_llm=-0.2510
+[Step] Sample=646 | ACCEPT | d_model=0.339 | d_total=0.163 | p=0.849
+[Debug] d_model=0.0555, d_llm=-0.0418
+[Step] Sample=654 | ACCEPT | d_model=0.056 | d_total=0.026 | p=0.974
+[Debug] d_model=1.8417, d_llm=-1.3664
+[Step] Sample=663 | REJECT | d_model=1.842 | d_total=0.885 | p=0.413
+[Debug] d_model=0.5896, d_llm=-0.4428
+[Step] Sample=668 | ACCEPT | d_model=0.590 | d_total=0.280 | p=0.756
+[Debug] d_model=1.3350, d_llm=-1.0026
+[Step] Sample=686 | ACCEPT | d_model=1.335 | d_total=0.633 | p=0.531
+[Debug] d_model=1.9672, d_llm=1.4519
+[Step] Sample=698 | REJECT | d_model=1.967 | d_total=2.983 | p=0.051
+[Debug] d_model=1.3115, d_llm=0.9689
+[Step] Sample=724 | REJECT | d_model=1.312 | d_total=1.990 | p=0.137
+[Debug] d_model=1.5790, d_llm=0.1956
+[Step] Sample=727 | REJECT | d_model=1.579 | d_total=1.716 | p=0.180
+[Debug] d_model=1.2755, d_llm=-0.0635
+[Step] Sample=731 | REJECT | d_model=1.276 | d_total=1.231 | p=0.292
+[Debug] d_model=1.5959, d_llm=0.0361
+[Step] Sample=737 | ACCEPT | d_model=1.596 | d_total=1.621 | p=0.198
+[Debug] d_model=1.2208, d_llm=-0.8963
+[Step] Sample=745 | REJECT | d_model=1.221 | d_total=0.593 | p=0.552
+[Debug] d_model=1.2466, d_llm=0.9175
+[Step] Sample=761 | REJECT | d_model=1.247 | d_total=1.889 | p=0.151
+[Debug] d_model=1.2929, d_llm=0.9529
+[Step] Sample=764 | REJECT | d_model=1.293 | d_total=1.960 | p=0.141
+[Debug] d_model=0.8936, d_llm=0.4927
+[Step] Sample=773 | ACCEPT | d_model=0.894 | d_total=1.238 | p=0.290
+[Debug] d_model=1.8546, d_llm=0.0307
+[Step] Sample=775 | REJECT | d_model=1.855 | d_total=1.876 | p=0.153
+[Debug] d_model=1.3853, d_llm=-0.1756
+[Step] Sample=780 | REJECT | d_model=1.385 | d_total=1.262 | p=0.283
+[Debug] d_model=1.5581, d_llm=-1.1372
+[Step] Sample=784 | REJECT | d_model=1.558 | d_total=0.762 | p=0.467
+[Debug] d_model=1.5662, d_llm=-1.1378
+[Step] Sample=790 | ACCEPT | d_model=1.566 | d_total=0.770 | p=0.463
+[Debug] d_model=1.4536, d_llm=0.8066
+[Step] Sample=814 | REJECT | d_model=1.454 | d_total=2.018 | p=0.133
+[Debug] d_model=1.9887, d_llm=0.9600
+[Step] Sample=833 | REJECT | d_model=1.989 | d_total=2.661 | p=0.070
+[Debug] d_model=1.7756, d_llm=-0.0563
+[Step] Sample=835 | ACCEPT | d_model=1.776 | d_total=1.736 | p=0.176
+[Debug] d_model=1.1827, d_llm=-0.8404
+[Step] Sample=844 | REJECT | d_model=1.183 | d_total=0.594 | p=0.552
+[Debug] d_model=0.3791, d_llm=-0.0688
+[Step] Sample=857 | ACCEPT | d_model=0.379 | d_total=0.331 | p=0.718
+[Debug] d_model=1.7654, d_llm=1.2606
+[Step] Sample=865 | REJECT | d_model=1.765 | d_total=2.648 | p=0.071
+[Debug] d_model=0.2474, d_llm=-0.1793
+[Step] Sample=871 | ACCEPT | d_model=0.247 | d_total=0.122 | p=0.885
+[Debug] d_model=1.3305, d_llm=-0.9652
+[Step] Sample=879 | REJECT | d_model=1.331 | d_total=0.655 | p=0.520
+[Debug] d_model=0.5436, d_llm=0.3995
+[Step] Sample=904 | REJECT | d_model=0.544 | d_total=0.823 | p=0.439
+[Debug] d_model=0.7830, d_llm=0.5812
+[Step] Sample=907 | REJECT | d_model=0.783 | d_total=1.190 | p=0.304
+[Debug] d_model=1.6161, d_llm=0.8445
+[Step] Sample=930 | REJECT | d_model=1.616 | d_total=2.207 | p=0.110
+[Debug] d_model=1.1605, d_llm=-0.1589
+[Step] Sample=931 | ACCEPT | d_model=1.160 | d_total=1.049 | p=0.350
+[Debug] d_model=1.2279, d_llm=-0.0674
+[Step] Sample=946 | REJECT | d_model=1.228 | d_total=1.181 | p=0.307
+[Debug] d_model=1.2213, d_llm=0.9091
+[Step] Sample=966 | ACCEPT | d_model=1.221 | d_total=1.858 | p=0.156
+[Debug] d_model=1.4596, d_llm=1.0835
+[Step] Sample=971 | REJECT | d_model=1.460 | d_total=2.218 | p=0.109
+[Debug] d_model=1.8192, d_llm=0.1043
+[Step] Sample=976 | REJECT | d_model=1.819 | d_total=1.892 | p=0.151
+[Debug] d_model=1.1431, d_llm=-0.8420
+[Step] Sample=984 | ACCEPT | d_model=1.143 | d_total=0.554 | p=0.575
+[Debug] d_model=1.3057, d_llm=-0.9629
+[Step] Sample=991 | ACCEPT | d_model=1.306 | d_total=0.632 | p=0.532
+[Debug] d_model=1.9371, d_llm=-1.4067
+[Step] Sample=996 | ACCEPT | d_model=1.937 | d_total=0.952 | p=0.386
+[Debug] d_model=1.3151, d_llm=-0.9563
+[Step] Sample=997 | ACCEPT | d_model=1.315 | d_total=0.646 | p=0.524
+[Debug] d_model=1.6938, d_llm=0.4918
+[Step] Sample=1004 | REJECT | d_model=1.694 | d_total=2.038 | p=0.130
+[Debug] d_model=1.7601, d_llm=-0.2301
+[Step] Sample=1029 | ACCEPT | d_model=1.760 | d_total=1.599 | p=0.202
+[Debug] d_model=0.9822, d_llm=0.4641
+[Step] Sample=1035 | REJECT | d_model=0.982 | d_total=1.307 | p=0.271
+[Debug] d_model=0.7034, d_llm=0.4182
+[Step] Sample=1039 | REJECT | d_model=0.703 | d_total=0.996 | p=0.369
+[Debug] d_model=0.7538, d_llm=-0.5552
+[Step] Sample=1042 | ACCEPT | d_model=0.754 | d_total=0.365 | p=0.694
+[Debug] d_model=1.7137, d_llm=1.2511
+[Step] Sample=1053 | REJECT | d_model=1.714 | d_total=2.589 | p=0.075
+[Debug] d_model=1.0917, d_llm=0.2993
+[Step] Sample=1083 | ACCEPT | d_model=1.092 | d_total=1.301 | p=0.272
+[Debug] d_model=0.1003, d_llm=0.0747
+[Step] Sample=1105 | ACCEPT | d_model=0.100 | d_total=0.153 | p=0.858
+[Debug] d_model=1.8978, d_llm=1.3936
+[Step] Sample=1115 | REJECT | d_model=1.898 | d_total=2.873 | p=0.057
+[Debug] d_model=1.6075, d_llm=-1.1735
+[Step] Sample=1116 | REJECT | d_model=1.607 | d_total=0.786 | p=0.456
+[Debug] d_model=0.3321, d_llm=0.2459
+[Step] Sample=1119 | REJECT | d_model=0.332 | d_total=0.504 | p=0.604
+[Debug] d_model=0.8158, d_llm=-0.6100
+[Step] Sample=1135 | ACCEPT | d_model=0.816 | d_total=0.389 | p=0.678
+[Debug] d_model=1.3856, d_llm=-0.5783
+[Step] Sample=1143 | REJECT | d_model=1.386 | d_total=0.981 | p=0.375
+[Debug] d_model=0.6595, d_llm=-0.4983
+[Step] Sample=1149 | ACCEPT | d_model=0.659 | d_total=0.311 | p=0.733
+[Debug] d_model=0.4703, d_llm=-0.3601
+[Step] Sample=1155 | ACCEPT | d_model=0.470 | d_total=0.218 | p=0.804
+[Debug] d_model=0.4446, d_llm=-0.3450
+[Step] Sample=1157 | ACCEPT | d_model=0.445 | d_total=0.203 | p=0.816
+[Debug] d_model=1.6877, d_llm=-0.7913
+[Step] Sample=1167 | REJECT | d_model=1.688 | d_total=1.134 | p=0.322
+[Debug] d_model=1.3994, d_llm=-1.0719
+[Step] Sample=1185 | REJECT | d_model=1.399 | d_total=0.649 | p=0.523
+[Debug] d_model=1.1587, d_llm=0.8904
+[Step] Sample=1188 | REJECT | d_model=1.159 | d_total=1.782 | p=0.168
+
+[LLM Summary]
+LLM used  : 130/1200
+Accepted  : 52/1198
+T         : 0.9235
+[LLM Done]
+
+
+Physical Refinement Diagnostics: 0.5467168092727661
+Binder cumulant (1): 0.653636634349823
+Chi improvement: -0.1350327730178833
+Binder improvement: 0.0006523728370666504
+
+[LLM] Start | B=1200 | T=0.9235
+[Debug] ESS=1.00 | k=1198 | deltaE_band=[0.00,2.00] | in_band=111 | selected=111
+[Debug] d_model=1.9255, d_llm=-0.4305
+[Step] Sample=5 | ACCEPT | d_model=1.926 | d_total=1.624 | p=0.197
+[Debug] d_model=1.4636, d_llm=1.1015
+[Step] Sample=6 | REJECT | d_model=1.464 | d_total=2.235 | p=0.107
+[Debug] d_model=1.4465, d_llm=-1.0856
+[Step] Sample=12 | REJECT | d_model=1.446 | d_total=0.687 | p=0.503
+[Debug] d_model=1.1192, d_llm=0.8437
+[Step] Sample=24 | ACCEPT | d_model=1.119 | d_total=1.710 | p=0.181
+[Debug] d_model=0.9023, d_llm=-0.6858
+[Step] Sample=43 | REJECT | d_model=0.902 | d_total=0.422 | p=0.656
+[Debug] d_model=1.3847, d_llm=-1.0507
+[Step] Sample=54 | ACCEPT | d_model=1.385 | d_total=0.649 | p=0.522
+[Debug] d_model=0.8358, d_llm=0.6400
+[Step] Sample=73 | REJECT | d_model=0.836 | d_total=1.284 | p=0.277
+[Debug] d_model=1.4066, d_llm=-1.0745
+[Step] Sample=80 | REJECT | d_model=1.407 | d_total=0.654 | p=0.520
+[Debug] d_model=0.1728, d_llm=-0.0630
+[Step] Sample=81 | REJECT | d_model=0.173 | d_total=0.129 | p=0.879
+[Debug] d_model=1.6492, d_llm=1.2668
+[Step] Sample=99 | REJECT | d_model=1.649 | d_total=2.536 | p=0.079
+[Debug] d_model=0.3294, d_llm=0.2566
+[Step] Sample=104 | ACCEPT | d_model=0.329 | d_total=0.509 | p=0.601
+[Debug] d_model=1.6667, d_llm=1.2854
+[Step] Sample=110 | REJECT | d_model=1.667 | d_total=2.566 | p=0.077
+[Debug] d_model=1.1022, d_llm=-0.8536
+[Step] Sample=140 | REJECT | d_model=1.102 | d_total=0.505 | p=0.604
+[Debug] d_model=0.1025, d_llm=-0.0806
+[Step] Sample=149 | ACCEPT | d_model=0.103 | d_total=0.046 | p=0.955
+[Debug] d_model=1.7976, d_llm=0.3798
+[Step] Sample=160 | REJECT | d_model=1.798 | d_total=2.063 | p=0.127
+[Debug] d_model=1.4559, d_llm=1.1234
+[Step] Sample=187 | REJECT | d_model=1.456 | d_total=2.242 | p=0.106
+[Debug] d_model=0.5737, d_llm=-0.4481
+[Step] Sample=207 | ACCEPT | d_model=0.574 | d_total=0.260 | p=0.771
+[Debug] d_model=1.6678, d_llm=0.5206
+[Step] Sample=212 | REJECT | d_model=1.668 | d_total=2.032 | p=0.131
+[Debug] d_model=0.9838, d_llm=0.5740
+[Step] Sample=229 | ACCEPT | d_model=0.984 | d_total=1.386 | p=0.250
+[Debug] d_model=1.2631, d_llm=-0.2256
+[Step] Sample=234 | REJECT | d_model=1.263 | d_total=1.105 | p=0.331
+[Debug] d_model=1.2027, d_llm=0.9379
+[Step] Sample=246 | REJECT | d_model=1.203 | d_total=1.859 | p=0.156
+[Debug] d_model=0.7614, d_llm=0.5996
+[Step] Sample=248 | ACCEPT | d_model=0.761 | d_total=1.181 | p=0.307
+[Debug] d_model=1.4199, d_llm=-1.1140
+[Step] Sample=258 | REJECT | d_model=1.420 | d_total=0.640 | p=0.527
+[Debug] d_model=1.4091, d_llm=0.0442
+[Step] Sample=259 | REJECT | d_model=1.409 | d_total=1.440 | p=0.237
+[Debug] d_model=0.5528, d_llm=-0.4376
+[Step] Sample=272 | ACCEPT | d_model=0.553 | d_total=0.246 | p=0.782
+[Debug] d_model=0.6567, d_llm=-0.5257
+[Step] Sample=274 | ACCEPT | d_model=0.657 | d_total=0.289 | p=0.749
+[Debug] d_model=1.6823, d_llm=-0.8243
+[Step] Sample=291 | REJECT | d_model=1.682 | d_total=1.105 | p=0.331
+[Debug] d_model=1.5651, d_llm=0.1095
+[Step] Sample=306 | ACCEPT | d_model=1.565 | d_total=1.642 | p=0.194
+[Debug] d_model=1.6104, d_llm=-1.2525
+[Step] Sample=312 | REJECT | d_model=1.610 | d_total=0.734 | p=0.480
+[Debug] d_model=0.2789, d_llm=0.2201
+[Step] Sample=341 | REJECT | d_model=0.279 | d_total=0.433 | p=0.649
+[Debug] d_model=1.5070, d_llm=-1.1818
+[Step] Sample=345 | ACCEPT | d_model=1.507 | d_total=0.680 | p=0.507
+[Debug] d_model=0.8609, d_llm=-0.6807
+[Step] Sample=348 | REJECT | d_model=0.861 | d_total=0.384 | p=0.681
+[Debug] d_model=0.6423, d_llm=0.5137
+[Step] Sample=352 | REJECT | d_model=0.642 | d_total=1.002 | p=0.367
+[Debug] d_model=1.6447, d_llm=1.3010
+[Step] Sample=371 | REJECT | d_model=1.645 | d_total=2.555 | p=0.078
+[Debug] d_model=0.6248, d_llm=0.0944
+[Step] Sample=384 | REJECT | d_model=0.625 | d_total=0.691 | p=0.501
+[Debug] d_model=1.7126, d_llm=-0.4104
+[Step] Sample=386 | REJECT | d_model=1.713 | d_total=1.425 | p=0.240
+[Debug] d_model=0.7105, d_llm=0.5670
+[Step] Sample=399 | REJECT | d_model=0.711 | d_total=1.107 | p=0.330
+[Debug] d_model=1.9240, d_llm=1.4986
+[Step] Sample=404 | REJECT | d_model=1.924 | d_total=2.973 | p=0.051
+[Debug] d_model=1.2816, d_llm=0.8345
+[Step] Sample=441 | REJECT | d_model=1.282 | d_total=1.866 | p=0.155
+[Debug] d_model=0.8555, d_llm=-0.6748
+[Step] Sample=448 | ACCEPT | d_model=0.856 | d_total=0.383 | p=0.682
+[Debug] d_model=1.8301, d_llm=1.4207
+[Step] Sample=451 | REJECT | d_model=1.830 | d_total=2.825 | p=0.059
+[Debug] d_model=0.9460, d_llm=0.7395
+[Step] Sample=456 | REJECT | d_model=0.946 | d_total=1.464 | p=0.231
+[Debug] d_model=1.5089, d_llm=-0.5152
+[Step] Sample=466 | REJECT | d_model=1.509 | d_total=1.148 | p=0.317
+[Debug] d_model=0.3404, d_llm=0.2683
+[Step] Sample=468 | REJECT | d_model=0.340 | d_total=0.528 | p=0.590
+[Debug] d_model=0.8731, d_llm=-0.6937
+[Step] Sample=473 | ACCEPT | d_model=0.873 | d_total=0.388 | p=0.679
+[Debug] d_model=0.8535, d_llm=0.6837
+[Step] Sample=479 | REJECT | d_model=0.853 | d_total=1.332 | p=0.264
+[Debug] d_model=0.5585, d_llm=-0.4528
+[Step] Sample=484 | ACCEPT | d_model=0.558 | d_total=0.241 | p=0.785
+[Debug] d_model=1.1134, d_llm=-0.9053
+[Step] Sample=491 | ACCEPT | d_model=1.113 | d_total=0.480 | p=0.619
+[Debug] d_model=0.8653, d_llm=0.5018
+[Step] Sample=513 | REJECT | d_model=0.865 | d_total=1.217 | p=0.296
+[Debug] d_model=1.2056, d_llm=-0.7082
+[Step] Sample=528 | REJECT | d_model=1.206 | d_total=0.710 | p=0.492
+[Debug] d_model=0.0526, d_llm=0.0438
+[Step] Sample=543 | ACCEPT | d_model=0.053 | d_total=0.083 | p=0.920
+[Debug] d_model=1.3080, d_llm=0.3990
+[Step] Sample=559 | REJECT | d_model=1.308 | d_total=1.587 | p=0.204
+[Debug] d_model=1.6782, d_llm=-0.8159
+[Step] Sample=568 | ACCEPT | d_model=1.678 | d_total=1.107 | p=0.331
+[Debug] d_model=1.3627, d_llm=-1.1112
+[Step] Sample=570 | ACCEPT | d_model=1.363 | d_total=0.585 | p=0.557
+[Debug] d_model=1.4061, d_llm=-0.7212
+[Step] Sample=584 | REJECT | d_model=1.406 | d_total=0.901 | p=0.406
+[Debug] d_model=1.4932, d_llm=0.0080
+[Step] Sample=598 | REJECT | d_model=1.493 | d_total=1.499 | p=0.223
+[Debug] d_model=1.3091, d_llm=1.0534
+[Step] Sample=601 | REJECT | d_model=1.309 | d_total=2.046 | p=0.129
+[Debug] d_model=0.8260, d_llm=-0.6702
+[Step] Sample=608 | ACCEPT | d_model=0.826 | d_total=0.357 | p=0.700
+[Debug] d_model=1.2708, d_llm=-1.0302
+[Step] Sample=643 | REJECT | d_model=1.271 | d_total=0.550 | p=0.577
+[Debug] d_model=1.8933, d_llm=-1.5046
+[Step] Sample=646 | REJECT | d_model=1.893 | d_total=0.840 | p=0.432
+[Debug] d_model=1.2271, d_llm=0.8268
+[Step] Sample=653 | REJECT | d_model=1.227 | d_total=1.806 | p=0.164
+[Debug] d_model=0.5465, d_llm=-0.4400
+[Step] Sample=654 | ACCEPT | d_model=0.547 | d_total=0.239 | p=0.788
+[Debug] d_model=0.8013, d_llm=-0.6508
+[Step] Sample=673 | ACCEPT | d_model=0.801 | d_total=0.346 | p=0.708
+[Debug] d_model=1.4068, d_llm=-0.3423
+[Step] Sample=678 | REJECT | d_model=1.407 | d_total=1.167 | p=0.311
+[Debug] d_model=0.5952, d_llm=0.4869
+[Step] Sample=706 | REJECT | d_model=0.595 | d_total=0.936 | p=0.392
+[Debug] d_model=0.7882, d_llm=0.6505
+[Step] Sample=712 | REJECT | d_model=0.788 | d_total=1.244 | p=0.288
+[Debug] d_model=0.2303, d_llm=0.1183
+[Step] Sample=715 | ACCEPT | d_model=0.230 | d_total=0.313 | p=0.731
+[Debug] d_model=0.7941, d_llm=-0.6707
+[Step] Sample=716 | ACCEPT | d_model=0.794 | d_total=0.325 | p=0.723
+[Debug] d_model=1.5925, d_llm=1.3186
+[Step] Sample=727 | REJECT | d_model=1.593 | d_total=2.516 | p=0.081
+[Debug] d_model=0.3017, d_llm=-0.2554
+[Step] Sample=762 | ACCEPT | d_model=0.302 | d_total=0.123 | p=0.884
+[Debug] d_model=1.3094, d_llm=-0.9355
+[Step] Sample=785 | ACCEPT | d_model=1.309 | d_total=0.655 | p=0.520
+[Debug] d_model=0.8396, d_llm=0.7137
+[Step] Sample=793 | REJECT | d_model=0.840 | d_total=1.339 | p=0.262
+[Debug] d_model=0.2657, d_llm=-0.0398
+[Step] Sample=797 | REJECT | d_model=0.266 | d_total=0.238 | p=0.788
+[Debug] d_model=0.8641, d_llm=0.7502
+[Step] Sample=802 | REJECT | d_model=0.864 | d_total=1.389 | p=0.249
+[Debug] d_model=1.8876, d_llm=-1.5988
+[Step] Sample=805 | REJECT | d_model=1.888 | d_total=0.768 | p=0.464
+[Debug] d_model=0.5629, d_llm=-0.4824
+[Step] Sample=818 | ACCEPT | d_model=0.563 | d_total=0.225 | p=0.798
+[Debug] d_model=0.9327, d_llm=0.8037
+[Step] Sample=838 | REJECT | d_model=0.933 | d_total=1.495 | p=0.224
+[Debug] d_model=0.0914, d_llm=-0.0799
+[Step] Sample=842 | ACCEPT | d_model=0.091 | d_total=0.035 | p=0.965
+[Debug] d_model=1.8123, d_llm=-1.5506
+[Step] Sample=894 | REJECT | d_model=1.812 | d_total=0.727 | p=0.483
+[Debug] d_model=0.6213, d_llm=0.5374
+[Step] Sample=913 | ACCEPT | d_model=0.621 | d_total=0.998 | p=0.369
+[Debug] d_model=0.9107, d_llm=0.7923
+[Step] Sample=914 | REJECT | d_model=0.911 | d_total=1.465 | p=0.231
+[Debug] d_model=1.9010, d_llm=1.5651
+[Step] Sample=919 | ACCEPT | d_model=1.901 | d_total=2.997 | p=0.050
+[Debug] d_model=1.2749, d_llm=-1.0786
+[Step] Sample=940 | ACCEPT | d_model=1.275 | d_total=0.520 | p=0.595
+[Debug] d_model=1.5538, d_llm=-1.2523
+[Step] Sample=943 | ACCEPT | d_model=1.554 | d_total=0.677 | p=0.508
+[Debug] d_model=0.3730, d_llm=0.0212
+[Step] Sample=952 | ACCEPT | d_model=0.373 | d_total=0.388 | p=0.679
+[Debug] d_model=1.0614, d_llm=-0.8638
+[Step] Sample=971 | ACCEPT | d_model=1.061 | d_total=0.457 | p=0.633
+[Debug] d_model=0.3838, d_llm=0.3310
+[Step] Sample=982 | ACCEPT | d_model=0.384 | d_total=0.616 | p=0.540
+[Debug] d_model=1.2110, d_llm=1.0431
+[Step] Sample=984 | REJECT | d_model=1.211 | d_total=1.941 | p=0.144
+[Debug] d_model=1.2909, d_llm=1.1080
+[Step] Sample=1000 | REJECT | d_model=1.291 | d_total=2.066 | p=0.127
+[Debug] d_model=0.3508, d_llm=-0.2719
+[Step] Sample=1006 | REJECT | d_model=0.351 | d_total=0.161 | p=0.852
+[Debug] d_model=0.8934, d_llm=-0.7822
+[Step] Sample=1011 | ACCEPT | d_model=0.893 | d_total=0.346 | p=0.708
+[Debug] d_model=0.9194, d_llm=-0.6580
+[Step] Sample=1030 | ACCEPT | d_model=0.919 | d_total=0.459 | p=0.632
+[Debug] d_model=0.8833, d_llm=-0.7821
+[Step] Sample=1031 | REJECT | d_model=0.883 | d_total=0.336 | p=0.715
+[Debug] d_model=0.7421, d_llm=-0.6627
+[Step] Sample=1059 | ACCEPT | d_model=0.742 | d_total=0.278 | p=0.757
+[Debug] d_model=0.8312, d_llm=0.7473
+[Step] Sample=1062 | REJECT | d_model=0.831 | d_total=1.354 | p=0.258
+[Debug] d_model=0.9563, d_llm=-0.0410
+[Step] Sample=1067 | REJECT | d_model=0.956 | d_total=0.928 | p=0.396
+[Debug] d_model=0.5641, d_llm=-0.5149
+[Step] Sample=1084 | ACCEPT | d_model=0.564 | d_total=0.204 | p=0.816
+[Debug] d_model=0.6023, d_llm=0.5557
+[Step] Sample=1085 | REJECT | d_model=0.602 | d_total=0.991 | p=0.371
+[Debug] d_model=1.6608, d_llm=-1.5021
+[Step] Sample=1089 | ACCEPT | d_model=1.661 | d_total=0.609 | p=0.544
+[Debug] d_model=1.2411, d_llm=-1.1182
+[Step] Sample=1092 | REJECT | d_model=1.241 | d_total=0.458 | p=0.632
+[Debug] d_model=0.2346, d_llm=0.2145
+[Step] Sample=1106 | ACCEPT | d_model=0.235 | d_total=0.385 | p=0.681
+[Debug] d_model=0.0475, d_llm=-0.0441
+[Step] Sample=1110 | ACCEPT | d_model=0.047 | d_total=0.017 | p=0.984
+[Debug] d_model=0.8627, d_llm=0.8051
+[Step] Sample=1113 | ACCEPT | d_model=0.863 | d_total=1.426 | p=0.240
+[Debug] d_model=0.6714, d_llm=-0.6324
+[Step] Sample=1121 | ACCEPT | d_model=0.671 | d_total=0.229 | p=0.796
+[Debug] d_model=0.5743, d_llm=0.0870
+[Step] Sample=1153 | ACCEPT | d_model=0.574 | d_total=0.635 | p=0.530
+[Debug] d_model=0.3555, d_llm=-0.3430
+[Step] Sample=1155 | ACCEPT | d_model=0.356 | d_total=0.115 | p=0.891
+[Debug] d_model=1.4500, d_llm=0.6971
+[Step] Sample=1157 | REJECT | d_model=1.450 | d_total=1.938 | p=0.144
+[Debug] d_model=1.5762, d_llm=1.3622
+[Step] Sample=1164 | REJECT | d_model=1.576 | d_total=2.530 | p=0.080
+[Debug] d_model=0.9481, d_llm=0.8884
+[Step] Sample=1169 | ACCEPT | d_model=0.948 | d_total=1.570 | p=0.208
+[Debug] d_model=1.5028, d_llm=1.3879
+[Step] Sample=1177 | REJECT | d_model=1.503 | d_total=2.474 | p=0.084
+[Debug] d_model=0.4109, d_llm=0.3844
+[Step] Sample=1181 | ACCEPT | d_model=0.411 | d_total=0.680 | p=0.507
+
+[LLM Summary]
+LLM used  : 111/1200
+Accepted  : 48/1198
+T         : 0.9235
+[LLM Done]
+
+
+Secondary magnetic susceptibility: 0.5484826564788818
+Binder cumulant (2): 0.6547187566757202
+Chi improvement: -0.13516372442245483
+Binder improvement: 0.0013096332550048828
+
+Running energy analysis ↓
+
+
+Running diagnostics with the following calculations ↙
+
+✔ Energy distribution finished in 284.17 seconds
+✔ Energy landscape extremes finished in 0.06 seconds
+✔ Phase diagram finished in 0.68 seconds
+✔ RBM filters finished in 0.07 seconds
+✔ Sample quality metrics finished in 26.13 seconds
+
+Diagnostics completed in 313.45 seconds
+
+GPU Energy Used : 320245.46 Joules
+
+Device: cuda
+, ↘
+
+samples_gpu0_seed2_refined.png → Patches: torch.Size([1200, 1, 28, 28])
+samples_gpu0_seed2_refined.png → Avg MSE: 0.13514422
+Saved: samples_gpu0_seed2_perfect.png
+
+Device: cuda
+, ↘
+
+samples_prof_gpu0_seed2_refined.png → Patches: torch.Size([1200, 1, 28, 28])
+samples_prof_gpu0_seed2_refined.png → Avg MSE: 0.13572769
+Saved: samples_prof_gpu0_seed2_perfect.png
+
+DEBUG perfect_img_path: samples_prof_gpu0_seed2_perfect.png
+[IMAGE LPIPS] 0.12663064897060394
+
+[LLM RAW OUTPUT]
+ {
+"analysis": "High image_similarity (0.873) and good reconstruction metrics indicate the refined outputs closely match the reference manifold. Entropy is low (history.current.entropy 0.1535; pixel_entropy 0.399), beta is high (4.42) and rising, and learning_active is true with a non-negligible learning_signal (0.320) and positive temp/beta trends → the system is still adapting but producing structured outputs. MCMC diagnostics show r_hat≈1.002 (well-mixed chains) and tau_int≈3 (moderate autocorrelation) — sampling is acceptable. Effective rank (~118) and susceptibility (~0.686) suggest preserved feature diversity rather than total collapse. According to the STRUCTURAL MODE PRINCIPLE and the COLLAPSE CRITERIA, we cannot label this as mode collapse because structural similarity is high and reconstruction quality is strong. Regime choice: \"learning\" (weights still changing, heating true, active learning signal). Phase choice: \"ordered\" (low entropy, high beta, structured outputs). Epistemic justification: multiple independent signals (image_similarity, low entropy, high beta, active learning) support this assessment; however the evidence is primarily global/aggregate statistics and image montages rather than exhaustive per-mode structural alignment tests. I estimate the available evidence strength ≈0.85; to respect the formal rule I set confidence lower (0.68) to reflect remaining uncertainty from limited per-mode structural verification and possible sampling subtleties. Confidence is bounded by the presented evidence and not an unconstrained subjective belief.",
+"regime": "learning",
+"phase": "ordered",
+"scores": {
+"temperature": 0.9234504103660583,
+"gibbs": 0.80
+},
+"risk": {
+"stagnation": 0.10,
+"collapse": 0.02,
+"over_ordering": 0.30
+},
+"confidence": 0.68
+}
+[SYS] EVIDENCE=0.275 | LLM=0.680 → FINAL=0.275
+
+[LLM CLEAN RESULT]
+ {'analysis': 'High image_similarity (0.873) and good reconstruction metrics indicate the refined outputs closely match the reference manifold. Entropy is low (history.current.entropy 0.1535; pixel_entropy 0.399), beta is high (4.42) and rising, and learning_active is true with a non-negligible learning_signal (0.320) and positive temp/beta trends → the system is still adapting but producing structured outputs. MCMC diagnostics show r_hat≈1.002 (well-mixed chains) and tau_int≈3 (moderate autocorrelation) — sampling is acceptable. Effective rank (~118) and susceptibility (~0.686) suggest preserved feature diversity rather than total collapse. According to the STRUCTURAL MODE PRINCIPLE and the COLLAPSE CRITERIA, we cannot label this as mode collapse because structural similarity is high and reconstruction quality is strong. Regime choice: "learning" (weights still changing, heating true, active learning signal). Phase choice: "ordered" (low entropy, high beta, structured outputs). Epistemic justification: multiple independent signals (image_similarity, low entropy, high beta, active learning) support this assessment; however the evidence is primarily global/aggregate statistics and image montages rather than exhaustive per-mode structural alignment tests. I estimate the available evidence strength ≈0.85; to respect the formal rule I set confidence lower (0.68) to reflect remaining uncertainty from limited per-mode structural verification and possible sampling subtleties. Confidence is bounded by the presented evidence and not an unconstrained subjective belief. [OVERRIDDEN: high structural similarity]', 'regime': 'learning', 'phase': 'ordered', 'scores': {'temperature': 0.4617252051830292, 'gibbs': 0.4}, 'risk': {'stagnation': 0.1, 'collapse': 0.0, 'over_ordering': 0.3}, 'confidence': 0.2746738702058792, 'evidence': 0.2746738702058792, 'llm_conf_raw': 0.68, 'reason': 'low_confidence_scaled'}
+[ANASIS] collapse=0.359 stagnation=0.345 healthy_align=0.521 → risk=0.427
+[ANALYSIS SIGNAL] 0.427
+[LLM OUTPUT SAVED] → llm_output_gpu0_seed2.json
+
+[LLM RESULT]
+
+{
+  "analysis": "High image_similarity (0.873) and good reconstruction metrics indicate the
+refined outputs closely match the reference manifold. Entropy is low
+(history.current.entropy 0.1535; pixel_entropy 0.399), beta is high (4.42) and rising, and
+learning_active is true with a non-negligible learning_signal (0.320) and positive
+temp/beta trends → the system is still adapting but producing structured outputs. MCMC
+diagnostics show r_hat≈1.002 (well-mixed chains) and tau_int≈3 (moderate autocorrelation)
+— sampling is acceptable. Effective rank (~118) and susceptibility (~0.686) suggest
+preserved feature diversity rather than total collapse. According to the STRUCTURAL MODE
+PRINCIPLE and the COLLAPSE CRITERIA, we cannot label this as mode collapse because
+structural similarity is high and reconstruction quality is strong. Regime choice:
+\"learning\" (weights still changing, heating true, active learning signal). Phase choice:
+\"ordered\" (low entropy, high beta, structured outputs). Epistemic justification:
+multiple independent signals (image_similarity, low entropy, high beta, active learning)
+support this assessment; however the evidence is primarily global/aggregate statistics and
+image montages rather than exhaustive per-mode structural alignment tests. I estimate the
+available evidence strength ≈0.85; to respect the formal rule I set confidence lower
+(0.68) to reflect remaining uncertainty from limited per-mode structural verification and
+possible sampling subtleties. Confidence is bounded by the presented evidence and not an
+unconstrained subjective belief. [OVERRIDDEN: high structural similarity]",
+  "regime": "learning",
+  "phase": "ordered",
+  "scores": {
+    "temperature": 0.4617252051830292,
+    "gibbs": 0.4
+  },
+  "risk": {
+    "stagnation": 0.1,
+    "collapse": 0.0,
+    "over_ordering": 0.3
+  },
+  "confidence": 0.2746738702058792,
+  "evidence": 0.2746738702058792,
+  "llm_conf_raw": 0.68,
+  "reason": "low_confidence_scaled"
+}
+
+Lag[8]_step ↓
+
+LagSteps=5  | Mix=0.482933 | PixelH=0.3984 | SpatialH=0.4038 | BandConsistent=False
+LagSteps=6  | Mix=0.448003 | PixelH=0.3977 | SpatialH=0.4039 | BandConsistent=False
+LagSteps=7  | Mix=0.421478 | PixelH=0.3963 | SpatialH=0.4053 | BandConsistent=False
+LagSteps=8  | Mix=0.402880 | PixelH=0.4010 | SpatialH=0.4053 | BandConsistent=True
+LagSteps=9  | Mix=0.393213 | PixelH=0.3945 | SpatialH=0.4042 | BandConsistent=False
+LagSteps=10 | Mix=0.377839 | PixelH=0.3963 | SpatialH=0.4038 | BandConsistent=False
+LagSteps=11 | Mix=0.369841 | PixelH=0.4002 | SpatialH=0.4045 | BandConsistent=False
+LagSteps=12 | Mix=0.359160 | PixelH=0.3989 | SpatialH=0.4055 | BandConsistent=False
+LagSteps=13 | Mix=0.353690 | PixelH=0.4011 | SpatialH=0.4057 | BandConsistent=False
+LagSteps=14 | Mix=0.343051 | PixelH=0.3960 | SpatialH=0.4033 | BandConsistent=False
+
+
+Hybrid Thermodynamic RBM Final Results
+Seed: 2 | GPU: 0
+Final Temperature        : 0.923450
+Weight Norm              : 68.431061
+Spectral Gain            : 74.103666
+Train Log-Likelihood     : -399.222626
+Test Log-Likelihood      : -398.560791
+Train Pseudo-Likelihood  : -0.689058
+Test Pseudo-Likelihood   : -0.689025
+Reconstruction MSE       : 0.015970
+Reconstruction Accuracy  : 0.979110
+Mean Data Energy         : -657.395325
+Mean Model Energy        : -632.982849
+Energy Gap               : 24.412476
+GPU Energy Used          : 320245.46 J
+Log Partition (AIS)      : 1056.617920
+AIS ESS                  : 3032.31
+AIS Log-Weight Variance  : 1.082392
+MCMC tau_int             : 3.05
+MCMC tau_std             : 0.15
+MCMC tau_max             : 3.96
+MCMC tau_min             : 2.70
+MCMC tau_rms             : 3.05
+MCMC tau_geo             : 3.04
+MCMC tau_harm            : 3.04
+MCMC ESS                 : 65798748.00
+MCMC ESS / chain         : 32899.38
+MCMC R-hat               : 1.0019
+MCMC ACF Length          : 8
+MCMC Mix Index           : 0.404569
+
+Note: Entropy bounds reordered—metric definitions are well-formed.
+
+Entropy Band             : Closed interval [0.398905, 0.404758]
+Choice(Mix | Band)       : C(0.404569 | [0.398905, 0.404758]) = 0.404569
+Band Consistency         : True
+
+>>> SEED EXPERIMENT: SUCCESS
+
+Hamming                  : 0.182319
+Effective Rank           : 118.416054
+Mean Distribution L2     : 0.120503
+Professional Samples File: samples_prof_gpu0_seed2.png
+Generated Samples File   : samples_gpu0_seed2.png
+
+(srtrbm_env) ...:~/srtrbm_project$

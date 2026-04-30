@@ -1,0 +1,18 @@
+{
+  "analysis": "High image_similarity (0.873) and good reconstruction metrics indicate the refined outputs closely match the reference manifold. Entropy is low (history.current.entropy 0.1535; pixel_entropy 0.399), beta is high (4.42) and rising, and learning_active is true with a non-negligible learning_signal (0.320) and positive temp/beta trends → the system is still adapting but producing structured outputs. MCMC diagnostics show r_hat≈1.002 (well-mixed chains) and tau_int≈3 (moderate autocorrelation) — sampling is acceptable. Effective rank (~118) and susceptibility (~0.686) suggest preserved feature diversity rather than total collapse. According to the STRUCTURAL MODE PRINCIPLE and the COLLAPSE CRITERIA, we cannot label this as mode collapse because structural similarity is high and reconstruction quality is strong. Regime choice: \"learning\" (weights still changing, heating true, active learning signal). Phase choice: \"ordered\" (low entropy, high beta, structured outputs). Epistemic justification: multiple independent signals (image_similarity, low entropy, high beta, active learning) support this assessment; however the evidence is primarily global/aggregate statistics and image montages rather than exhaustive per-mode structural alignment tests. I estimate the available evidence strength ≈0.85; to respect the formal rule I set confidence lower (0.68) to reflect remaining uncertainty from limited per-mode structural verification and possible sampling subtleties. Confidence is bounded by the presented evidence and not an unconstrained subjective belief. [OVERRIDDEN: high structural similarity]",
+  "regime": "learning",
+  "phase": "ordered",
+  "scores": {
+    "temperature": 0.4617252051830292,
+    "gibbs": 0.4
+  },
+  "risk": {
+    "stagnation": 0.1,
+    "collapse": 0.0,
+    "over_ordering": 0.3
+  },
+  "confidence": 0.2746738702058792,
+  "evidence": 0.2746738702058792,
+  "llm_conf_raw": 0.68,
+  "reason": "low_confidence_scaled"
+}
