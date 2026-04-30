@@ -70,21 +70,21 @@ After training and sampling, the system sweeps lag steps in the range:
 
 Lag[8]_step ↓
 
-LagSteps=5  | Mix=0.482933 | PixelH=0.3984 | SpatialH=0.4038 | BandConsistent=False
-LagSteps=6  | Mix=0.448003 | PixelH=0.3977 | SpatialH=0.4039 | BandConsistent=False
-LagSteps=7  | Mix=0.421478 | PixelH=0.3963 | SpatialH=0.4053 | BandConsistent=False
-LagSteps=8  | Mix=0.402880 | PixelH=0.4010 | SpatialH=0.4053 | BandConsistent=True
-LagSteps=9  | Mix=0.393213 | PixelH=0.3945 | SpatialH=0.4042 | BandConsistent=False
-LagSteps=10 | Mix=0.377839 | PixelH=0.3963 | SpatialH=0.4038 | BandConsistent=False
-LagSteps=11 | Mix=0.369841 | PixelH=0.4002 | SpatialH=0.4045 | BandConsistent=False
-LagSteps=12 | Mix=0.359160 | PixelH=0.3989 | SpatialH=0.4055 | BandConsistent=False
-LagSteps=13 | Mix=0.353690 | PixelH=0.4011 | SpatialH=0.4057 | BandConsistent=False
-LagSteps=14 | Mix=0.343051 | PixelH=0.3960 | SpatialH=0.4033 | BandConsistent=False
+LagSteps=5  | Mix=0.482933 | PixelH=0.3984 | SpatialH=0.4038 | BandConsistent=False  
+LagSteps=6  | Mix=0.448003 | PixelH=0.3977 | SpatialH=0.4039 | BandConsistent=False  
+LagSteps=7  | Mix=0.421478 | PixelH=0.3963 | SpatialH=0.4053 | BandConsistent=False  
+LagSteps=8  | Mix=0.402880 | PixelH=0.4010 | SpatialH=0.4053 | BandConsistent=True  
+LagSteps=9  | Mix=0.393213 | PixelH=0.3945 | SpatialH=0.4042 | BandConsistent=False  
+LagSteps=10 | Mix=0.377839 | PixelH=0.3963 | SpatialH=0.4038 | BandConsistent=False  
+LagSteps=11 | Mix=0.369841 | PixelH=0.4002 | SpatialH=0.4045 | BandConsistent=False  
+LagSteps=12 | Mix=0.359160 | PixelH=0.3989 | SpatialH=0.4055 | BandConsistent=False  
+LagSteps=13 | Mix=0.353690 | PixelH=0.4011 | SpatialH=0.4057 | BandConsistent=False  
+LagSteps=14 | Mix=0.343051 | PixelH=0.3960 | SpatialH=0.4033 | BandConsistent=False  
 
 ...
 
-Entropy Band             : Closed interval [0.398905, 0.404758]
-Choice(Mix | Band)       : C(0.404569 | [0.398905, 0.404758]) = 0.404569
+Entropy Band             : Closed interval [0.398905, 0.404758]  
+Choice(Mix | Band)       : C(0.404569 | [0.398905, 0.404758]) = 0.404569  
 Band Consistency         : True
 
 >>> SEED EXPERIMENT: SUCCESS
