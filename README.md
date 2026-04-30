@@ -41,6 +41,54 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 ---
 
+## 🔬 Experiment Protocol: Single-Seed Band Uniqueness Criterion
+
+The MYRA experiment protocol does not rely on multi-seed averaging or aggregate statistics across runs. Instead, each seed is evaluated independently through a band uniqueness criterion applied over a local lag sweep.
+
+After training and sampling, the system sweeps lag steps in the range:
+
+\`[lag_step − 5, lag_step + 6]\`
+
+At each step, the MCMC Mix Index is compared against the closed entropy interval:
+
+\`[min(PixelH, SpatialH), max(PixelH, SpatialH)]\`
+
+A seed experiment is considered successful if and only if all three conditions hold simultaneously:
+
+1. Global Mix Index ∈ Entropy Band  
+
+2. BandConsistent = True at the characteristic lag step  
+
+3. Exactly one lag step across the full sweep satisfies \`BandConsistent = True\`
+
+---
+
+### 🎯 Key Criterion: Uniqueness
+
+Condition (iii) is the structurally decisive one.
+
+If multiple lag steps produce band-consistent results, the mixing signal is diffuse — the system has not converged to a sharp, well-localized attractor.
+
+> A system that converges everywhere has converged nowhere in particular.
+
+Uniqueness of the band-consistent lag is therefore not a byproduct of the evaluation; it is the criterion itself.
+
+---
+
+### 🔥 Interpretation
+
+This design reflects a thermodynamic intuition:
+
+- A well-mixed chain should exhibit band consistency precisely at the characteristic autocorrelation scale of its energy landscape  
+
+- Not broadly  
+
+- Not sporadically  
+
+The goal is sharp localization, not widespread agreement.
+
+---
+
 ## 🚀 Overview
 
 MYRA (Model Representation Anatomy) is a hybrid system that combines energy-based generation with structural analysis and LLM-assisted interpretation.
