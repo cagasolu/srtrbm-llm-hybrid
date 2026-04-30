@@ -97,7 +97,7 @@ Band Consistency         : True
 
 ### ✅ Seed Experiment Result
 
-**SEED EXPERIMENT: SUCCESS** →  This run successfully satisfies the band consistency criterion. Notably, the valid solution emerges precisely at **lag step = 8**, indicating a well-aligned entropy balance within the defined band.
+**SEED EXPERIMENT: SUCCESS** → This run successfully satisfies the band consistency criterion. Notably, the valid solution emerges precisely at **lag step = 8**, indicating a well-aligned entropy balance within the defined band.
 
 > The outcome is relatively favorable given the stochastic nature of the process.
 
@@ -110,6 +110,10 @@ A seed experiment is considered successful if and only if all three conditions h
 1. Global Mix Index ∈ Entropy Band
 2. BandConsistent = True at the characteristic lag step
 3. Exactly one lag step across the full sweep satisfies \`BandConsistent = True\`.
+
+This implies a **unique choice function** over the admissible band:
+
+Choice(Mix | Band) : C(x | [y, z]) = x
 
 ---
 
