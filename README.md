@@ -41,25 +41,45 @@ Alternatively, you can use WinRAR or other compatible tools. The model's entire 
 
 ---
 
+### 🔧 Usage
+
+Extract the dataset before running experiments:
+
+\`\`\`bash
+
+7z x stan.7z
+
+\`\`\`
+
+Alternatively, you can use WinRAR or other compatible tools. The model's entire size is approximately 190 MB.
+
+---
+
 ## 🔬 Experiment Protocol: Single-Seed Band Uniqueness Criterion
 
-The MYRA experiment protocol does not rely on multi-seed averaging or aggregate statistics across runs. Instead, each seed is evaluated independently through a band uniqueness criterion applied over a local lag sweep.
+The MYRA experiment protocol does not rely on multi-seed averaging or aggregate statistics across runs. Instead, each seed is evaluated independently through a band uniqueness criterion applied over a local lag sweep. The purpose is to obtain a truth value for the seed level in the execution results. The concept is a new idea in the literature.
+
+For reference outputs, see the following:
+
+- `artifacts/run.log`—example of a successful run with a valid ground truth
+
+- `artifacts/run_false_example.log`—example of a run where the criterion is not satisfied
 
 After training and sampling, the system sweeps lag steps in the range:
 
-\`[lag_step − 5, lag_step + 6]\`
+`[lag_step − 5, lag_step + 6]`
 
 At each step, the MCMC Mix Index is compared against the closed entropy interval:
 
-\`[min(PixelH, SpatialH), max(PixelH, SpatialH)]\`
+`[min(PixelH, SpatialH), max(PixelH, SpatialH)]`
 
 A seed experiment is considered successful if and only if all three conditions hold simultaneously:
 
-1. Global Mix Index ∈ Entropy Band  
+1. Global Mix Index ∈ Entropy Band
 
-2. BandConsistent = True at the characteristic lag step  
+2. BandConsistent = True at the characteristic lag step
 
-3. Exactly one lag step across the full sweep satisfies \`BandConsistent = True\`
+3. Exactly one lag step across the full sweep satisfies \`BandConsistent = True\`.
 
 ---
 
@@ -67,7 +87,7 @@ A seed experiment is considered successful if and only if all three conditions h
 
 Condition (iii) is the structurally decisive one.
 
-If multiple lag steps produce band-consistent results, the mixing signal is diffuse — the system has not converged to a sharp, well-localized attractor.
+If multiple lag steps produce band-consistent results, the mixing signal is diffuse—the system has not converged to a sharp, well-localized attractor.
 
 > A system that converges everywhere has converged nowhere in particular.
 
@@ -79,11 +99,11 @@ Uniqueness of the band-consistent lag is therefore not a byproduct of the evalua
 
 This design reflects a thermodynamic intuition:
 
-- A well-mixed chain should exhibit band consistency precisely at the characteristic autocorrelation scale of its energy landscape  
+- A well-mixed chain should exhibit band consistency precisely at the characteristic autocorrelation scale of its energy landscape:
 
-- Not broadly  
+- Not broadly
 
-- Not sporadically  
+- Not sporadically
 
 The goal is sharp localization, not widespread agreement.
 
