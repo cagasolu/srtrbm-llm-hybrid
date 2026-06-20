@@ -4,7 +4,7 @@ A hybrid intelligence system where thermodynamic energy-based generation (SR-TRB
 
 > **“What did the model actually learn?”**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211121.svg)](https://doi.org/10.5281/zenodo.19211121)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.svg)](https://doi.org/10.5281/zenodo.19211121)
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)
 ![CUDA](https://img.shields.io/badge/CUDA-enabled-green)
